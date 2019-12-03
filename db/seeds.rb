@@ -1,4 +1,5 @@
 puts "Clearing DB..."
+Friendship.destroy_all
 Match.destroy_all
 User.destroy_all
 
@@ -10,6 +11,10 @@ user3 = User.create!(email: 'user3@user.com', password: 123456)
 user4 = User.create!(email: 'user4@user.com', password: 123456)
 user5 = User.create!(email: 'user5@user.com', password: 123456)
 user6 = User.create!(email: 'user6@user.com', password: 123456)
+
+
+puts "Creating friendships..."
+user1.friends << user2
 
 
 puts "Creating match scenarios..."
