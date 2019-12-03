@@ -11,5 +11,4 @@ class User < ApplicationRecord
   def potential_matches
     friend_matches.matchmaker_matched + matchee_matches.friend_accepted
   end
-
 end
