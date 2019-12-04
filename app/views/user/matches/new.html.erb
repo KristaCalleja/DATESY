@@ -1,2 +1,20 @@
 <h1>User::Matches#new</h1>
 <p>Find me in app/views/user/matches/new.html.erb</p>
+<p><%= current_user.id %></p>
+<p><%= @friend.id %></p>
+<ul>
+  <% @available_matchees.each do |matchee| %>
+    <li data-id=<%= matchee.id %>>
+      <%= matchee.email %>
+      <!-- Behavior of reject! -->
+      <!-- Remove element from the list -->
+      <%= link_to 'Reject!', '#', class: 'btn btn-danger' %>
+
+      <!-- Behavior of accept! -->
+      <!-- Trigger the modal form -->
+      <!-- Fill the matchee_id in the form, with the selected matchee id -->
+      <%= link_to 'Match!', '#', class: 'btn btn-primary' %>
+    </li>
+  <% end %>
+</ul>
+<p><%=  %></p>
