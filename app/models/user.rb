@@ -8,8 +8,10 @@ class User < ApplicationRecord
   has_many :friend_matches, foreign_key: :friend_id, class_name: "Match"
   has_many :matchee_matches, foreign_key: :matchee_id, class_name: "Match"
 
+  has_many :friendships
+  has_many :friends, through: :friendships
+
   def potential_matches
     friend_matches.matchmaker_matched + matchee_matches.friend_accepted
   end
-
 end
