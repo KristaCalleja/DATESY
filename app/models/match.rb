@@ -5,4 +5,5 @@ class Match < ApplicationRecord
 
   scope :friend_accepted, -> { where(status: 'friend_accepted') }
   scope :matchmaker_matched, -> { where(status: 'matchmaker_matched') }
+  scope :matchee_accepted, -> { where(status: 'matchee_accepted') }
 end

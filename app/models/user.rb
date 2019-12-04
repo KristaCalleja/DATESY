@@ -4,14 +4,24 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  # Matches I made for somebody
   has_many :matchmaker_matches, foreign_key: :matchmaker_id, class_name: "Match"
+
+  # Matches a matchmaker friend made for me
   has_many :friend_matches, foreign_key: :friend_id, class_name: "Match"
+
+  # Matches a matchmaker of another person made for me
   has_many :matchee_matches, foreign_key: :matchee_id, class_name: "Match"
 
   has_many :friendships
   has_many :friends, through: :friendships
 
+  def available_matchees_for(friend)
+    self.class.where.not(id: [id, friend.id])
+  end
+
   def potential_matches
+    # Rename the method and add additional user
     friend_matches.matchmaker_matched + matchee_matches.friend_accepted
   end
 end
