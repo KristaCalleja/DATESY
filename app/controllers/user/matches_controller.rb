@@ -9,7 +9,6 @@ class User::MatchesController < ApplicationController
   def create
     @friend = User.find(params[:friend_id])
     @match = Match.new(match_params)
-    @match.status = 'matchmaker_matched'
     @match.matchmaker = current_user
     @match.friend = @friend
     @match.save
@@ -20,6 +19,6 @@ class User::MatchesController < ApplicationController
   private
 
   def match_params
-    params.require(:match).permit(:matchee_id, :content)
+    params.require(:match).permit(:matchee_id, :content, :status)
   end
 end
