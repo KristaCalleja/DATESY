@@ -17,7 +17,9 @@ class User < ApplicationRecord
   has_many :friends, through: :friendships
 
   def available_matchees_for(friend)
-    self.class.where.not(id: [id, friend.id])
+    self.class.where.not(id: [id, friend.id]).
+      where.not(id: friend.matchee_matches.map {|match| match.friend_id}).
+      where.not(id: friend.friend_matches.map {|match| match.matchee_id})
   end
 
   def potential_matches
