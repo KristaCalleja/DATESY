@@ -24,7 +24,7 @@ Match.create!(
   friend: user1,
   matchmaker: user2,
   matchee: user3,
-  status: 'matchmaker_matched'
+  status: 'matchmaker_rejected'
 )
 
 # Has a matchmaker user2 that matches him/her with user 4
