@@ -3,7 +3,6 @@ Friendship.destroy_all
 Match.destroy_all
 User.destroy_all
 
-
 puts "Creating users..."
 jordan = User.create!(
   name: 'Jordan',
@@ -22,7 +21,7 @@ quinn = User.create!(
   description: 'My favourite time of the day is sunrise. Be it weekend or weekday, 5am is my time to warm up for my daily 2km run at Aterro. Looking for another sporty aficionado. Contact me now!' ,
   gender: ' ',
   sexual_orientation: 'hetero',
-  email: 'user11@user.com',
+  email: 'user2@user.com',
   password: '123456'
   )
 harley = User.create!(
@@ -32,7 +31,7 @@ harley = User.create!(
   description: 'Wie geht\'s? ?Hablas español? I am Brazilian by birth but my parents are Spanish and German. I lived in the Mississippi for 8 years and I wish to go back soon. I love bagels and coffee.' ,
   gender: ' ',
   sexual_orientation: 'homo',
-  email: 'user12@user.com',
+  email: 'user3@user.com',
   password: '123456'
   )
 spencer = User.create!(
@@ -42,7 +41,7 @@ spencer = User.create!(
   description: 'Tell me a recent idea that intrigued you.............. I love emojis' ,
   gender: ' ',
   sexual_orientation: 'homo',
-  email: 'user2@user.com',
+  email: 'user4@user.com',
   password: '123456'
   )
 skyler = User.create!(
@@ -52,7 +51,7 @@ skyler = User.create!(
   description: 'I am a huge college football fan, and an owner of one lucky labrador, Logan. I hate cooking! Let\'s go for pizza tonight!' ,
   gender: ' ',
   sexual_orientation: 'homo',
-  email: 'user3@user.com',
+  email: 'user5@user.com',
   password: '123456'
   )
 marley = User.create!(
@@ -62,7 +61,7 @@ marley = User.create!(
   description: 'Liked my pics? Then just contact me! I work in Barra, so I am mostly available to meet up only on weekends. PS: If you ask me if my fist name is Bob, I won\'t write back. Simple as that!' ,
   gender: ' ',
   sexual_orientation: 'homo',
-  email: 'user4@user.com',
+  email: 'user6@user.com',
   password: '123456'
   )
 ariel = User.create!(
@@ -72,7 +71,7 @@ ariel = User.create!(
   description: 'Grew up in the Portland, Oregon area. Survived middle school by becoming a skater kid (still haven’t grown out of it). Now I’m trying to pay my rent, play my music, and make my way.' ,
   gender: ' ',
   sexual_orientation: 'homo',
-  email: 'user5@user.com',
+  email: 'user7@user.com',
   password: '123456'
 )
 ellis = User.create!(
@@ -82,7 +81,7 @@ ellis = User.create!(
   description: 'My favorite movies are The Godfather and When Harry Met Sally. I am a staunch believer that a book cannot be judged by its cover.' ,
   gender: ' ',
   sexual_orientation: 'hetero',
-  email: 'user6@user.com',
+  email: 'user8@user.com',
   password: '123456'
 )
 remi = User.create!(
@@ -92,7 +91,7 @@ remi = User.create!(
   description: 'I value my family and I am not ashamed to say that. Family comes first. I am looking for a genuine connection. If you want a one night stand don\'t contact me.',
   gender: ' ',
   sexual_orientation: 'hetero',
-  email: 'user7@user.com',
+  email: 'user9@user.com',
   password: '123456'
   )
 

@@ -9,12 +9,12 @@
       <p><%= matchee.description %></p>
       <!-- Behavior of reject! -->
       <!-- Remove element from the list -->
-      <%= link_to 'Reject!', '#', class: 'btn btn-danger' %>
+      <%= render "shared/modal_reject", match: @match, matchee: matchee %>
 
       <!-- Behavior of accept! -->
       <!-- Trigger the modal form -->
       <!-- Fill the matchee_id in the form, with the selected matchee id -->
-      <p><%= render "shared/modal", match: @match, matchee: matchee %> </p>
+      <%= render "shared/modal", match: @match, matchee: matchee %>
     </li>
   <% end %>
 </ul>
