@@ -1,11 +1,12 @@
 <h1>User::Matches#new</h1>
 <p>Find me in app/views/user/matches/new.html.erb</p>
-<p><%= current_user.email %></p>
-<p><%= @friend.email %></p>
+<p><%= current_user.name %></p>
+<p><%= @friend.name %></p>
 <ul>
   <% @available_matchees.each do |matchee| %>
     <li data-id=<%= matchee.id %>>
-      <%= matchee.email %>
+      <p><%= "#{matchee.name} - #{matchee.age} years old"  %></p>
+      <p><%= matchee.description %></p>
       <!-- Behavior of reject! -->
       <!-- Remove element from the list -->
       <%= render "shared/modal_reject", match: @match, matchee: matchee %>
@@ -17,4 +18,3 @@
     </li>
   <% end %>
 </ul>
-<p><%=  %></p>
