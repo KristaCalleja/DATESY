@@ -13,7 +13,7 @@
       <!-- Behavior of accept! -->
       <!-- Trigger the modal form -->
       <!-- Fill the matchee_id in the form, with the selected matchee id -->
-      <%= link_to 'Match!', '#', class: 'btn btn-primary' %>
+      <p><%= render "shared/modal", match: @match, matchee: matchee %> </p>
     </li>
   <% end %>
 </ul>
