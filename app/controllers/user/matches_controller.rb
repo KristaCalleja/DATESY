@@ -1,4 +1,8 @@
 class User::MatchesController < ApplicationController
+  def index
+    @single_matches = current_user.potential_matches
+  end
+
   def new
     @friend = User.find(params[:friend_id])
     @match = Match.new

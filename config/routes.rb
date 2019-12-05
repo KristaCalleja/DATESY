@@ -14,5 +14,7 @@ Rails.application.routes.draw do
     resources :friends, only: [:index] do
       resources :matches, only: [:new, :create]
     end
+
+    resources :matches, only: [:index, :edit, :update]
   end
 end
