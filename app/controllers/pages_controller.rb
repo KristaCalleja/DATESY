@@ -5,5 +5,7 @@ class PagesController < ApplicationController
   end
 
   def kitchen_sink
+    @friend = User.new
+    @match = Match.new
   end
 end
