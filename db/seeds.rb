@@ -6,10 +6,10 @@ User.destroy_all
 puts "Creating users..."
 jordan = User.create!(
   name: 'Jordan',
-  photo: ' ',
+  photo: 'https://i.imgur.com/BaWnqU8.jpg ',
   age: 29,
   description: 'I am a nurse by profession, but my guitar is my passion. I am looking for a girl who can be my life partner.' ,
-  gender: 'https://i.imgur.com/BaWnqU8.jpg',
+  gender: '',
   sexual_orientation: 'hetero',
   email: 'user1@user.com',
   password: '123456'
