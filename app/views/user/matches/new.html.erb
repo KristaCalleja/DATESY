@@ -2,9 +2,8 @@
   <h1>Datesy</h1>
     <p><strong><%= current_user.name %></strong>, choose your friend from the list below.</p>
     <p>Friend: <strong><%= @friend.name %></strong></p>
-  <ul>
     <% @available_matchees.each do |matchee| %>
-      <li data-id=<%= matchee.id %>>
+      <data-id=<%= matchee.id %>>
         <p><%= render "shared/card", matchee: matchee %></p>
         <!-- Behavior of reject! -->
         <!-- Remove element from the list -->
@@ -13,7 +12,5 @@
         <!-- Trigger the modal form -->
         <!-- Fill the matchee_id in the form, with the selected matchee id -->
         <%= render "shared/modal", match: @match, matchee: matchee %>
-      </li>
     <% end %>
-  </ul>
 </div>
