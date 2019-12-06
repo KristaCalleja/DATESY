@@ -2,7 +2,7 @@
 <p>Find me in app/views/user/friends/index.html.erb</p>
 <% current_user.friends.each do |friend| %>
   <p>
-    <%= friend.email %>
-    <%= link_to 'Match for this fella!', new_user_friend_match_path(friend) %>
+    <%= friend.name %>
+    = = = <%= link_to 'Match for this fella!', new_user_friend_match_path(friend) %>
   </p>
 <% end %>
