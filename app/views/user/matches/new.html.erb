@@ -1,18 +1,20 @@
 <div class="container">
-  <h1>Datesy</h1>
-    <p><strong><%= @friend.name %></strong></p>
-  <ul>
-    <% @available_matchees.each do |matchee| %>
-      <li data-id=<%= matchee.id %>>
-        <p><%= render "shared/card", matchee: matchee %></p>
+  <% @available_matchees.each do |matchee| %>
+    <div class="card" data-id=<%= matchee.id %>>
+      <%= image_tag matchee.photo, style:"width: 273px;" %>
+      <div class="card-body">
+        <%= render "shared/card", matchee: matchee %>
         <!-- Behavior of reject! -->
         <!-- Remove element from the list -->
-        <%= render "shared/modal_reject", match: @match, matchee: matchee %>
-        <!-- Behavior of accept! -->
-        <!-- Trigger the modal form -->
-        <!-- Fill the matchee_id in the form, with the selected matchee id -->
-        <%= render "shared/modal", match: @match, matchee: matchee %>
-      </li>
-    <% end %>
-  </ul>
+
+        <div class="d-flex justify-content-between">
+          <%= render "shared/modal_reject", match: @match, matchee: matchee %>
+          <!-- Behavior of accept! -->
+          <!-- Trigger the modal form -->
+          <!-- Fill the matchee_id in the form, with the selected matchee id -->
+          <%= render "shared/match_button_with_modal", match: @match, friend: @friend, matchee: matchee %>
+        </div>
+      </div>
+    </li>
+  <% end %>
 </div>

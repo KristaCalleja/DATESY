@@ -12,7 +12,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <%= simple_form_for [friend, match], url: user_friend_matches_path do |f| %>
           <div class="modal-options">
             <div class="option-card form-check-type">
               <div class="option-icon">
@@ -40,7 +40,7 @@
                 <i class="fab fa-hotjar"></i>
               </div>
               <input class="form-check-input-sexy" type="checkbox" id="inlineCheckbox4">
-              <label class="form-check-label" for="inlineCheckbox4"></i>So Hot</label>
+              <label class="form-check-label" for="inlineCheckbox4">So Hot</label>
             </div>
             <div class="option-card form-check-random">
               <div class="option-icon">
@@ -57,16 +57,14 @@
               <label class="form-check-label" for="inlineCheckbox6">Similar background</label>
             </div>
           </div>
-          <br><br>
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1"><h5>Add a note...</h5></label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-          <a class="btn btn-primary" href="#" role="button">Send Match</a>
-        </form>
+          <%= f.input :matchee_id, as: :hidden, input_html: { value: matchee.id } %>
+          <%= f.input :status, as: :hidden, input_html: { value: 'matchmaker_matched' } %>
+
+          <%= f.input :content, label: 'Write a message to your friend', as: :text, input_html: { row: 3 } %>
+
+          <%= f.button :submit, 'Send Match', class: "btn-primary" %>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
-</div>
-

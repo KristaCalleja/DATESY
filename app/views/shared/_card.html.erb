@@ -1,12 +1,4 @@
 <!-- This card receives a matchee (User) from MatchesController#new -->
-
-<div class="container">
-  <div class="card">
-        <%= image_tag matchee.photo, style:"width: 273px;" %>
-      <div class="card-body">
-        <p class="card-name"><strong><%= matchee.name %></strong></p>
-        <p class="card-text"> <%= matchee.description %></p>
-        <p class="card-age"><%= matchee.age %> years old</p>
-      </div>
-  </div>
-</div>
+<p class="card-name"><strong><%= matchee.name %></strong></p>
+<p class="card-text"> <%= matchee.description %></p>
+<p class="card-age"><%= matchee.age %> years old</p>
