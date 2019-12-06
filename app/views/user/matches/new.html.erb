@@ -1,20 +1,22 @@
-<h1>User::Matches#new</h1>
-<p>Find me in app/views/user/matches/new.html.erb</p>
-<p><%= current_user.name %></p>
-<p><%= @friend.name %></p>
-<ul>
-  <% @available_matchees.each do |matchee| %>
-    <li data-id=<%= matchee.id %>>
-      <p><%= "#{matchee.name} - #{matchee.age} years old"  %></p>
-      <p><%= matchee.description %></p>
-      <!-- Behavior of reject! -->
-      <!-- Remove element from the list -->
-      <%= render "shared/modal_reject", match: @match, matchee: matchee %>
+<div class="container">
+  <h1>User::Matches#new</h1>
+    <p>Find me in app/views/user/matches/new.html.erb</p>
+    <p><%= current_user.name %></p>
+    <p><%= @friend.name %></p>
+  <ul>
+    <% @available_matchees.each do |matchee| %>
+      <li data-id=<%= matchee.id %>>
+        <p><%= "#{matchee.name} - #{matchee.age} years old"  %></p>
+        <p><%= matchee.description %></p>
+        <!-- Behavior of reject! -->
+        <!-- Remove element from the list -->
+        <%= render "shared/modal_reject", match: @match, matchee: matchee %>
 
-      <!-- Behavior of accept! -->
-      <!-- Trigger the modal form -->
-      <!-- Fill the matchee_id in the form, with the selected matchee id -->
-      <%= render "shared/modal", match: @match, matchee: matchee %>
-    </li>
-  <% end %>
-</ul>
+        <!-- Behavior of accept! -->
+        <!-- Trigger the modal form -->
+        <!-- Fill the matchee_id in the form, with the selected matchee id -->
+        <%= render "shared/modal", match: @match, matchee: matchee %>
+      </li>
+    <% end %>
+  </ul>
+</div>
