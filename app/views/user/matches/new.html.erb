@@ -1,7 +1,6 @@
 <div class="container">
   <h1>Datesy</h1>
-    <p><strong><%= current_user.name %></strong>, choose your friend from the list below.</p>
-    <p>Friend: <strong><%= @friend.name %></strong></p>
+    <p><strong><%= @friend.name %></strong></p>
   <ul>
     <% @available_matchees.each do |matchee| %>
       <li data-id=<%= matchee.id %>>
