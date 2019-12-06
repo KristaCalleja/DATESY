@@ -1,0 +1,55 @@
+.modal-content {
+  padding: 20px;
+  border-radius: 4px;
+  background-color: $primary;
+  color: $off-white;
+}
+
+.modal-title {
+  font-family: "Libre Franklin", "sans-serif";
+  text-transform: uppercase;
+}
+
+.form-group {
+  font-family: "Libre Franklin", "sans-serif";
+  text-transform: uppercase;
+}
+
+.option-card {
+  background-color: $primary;
+  input {
+    display: none;
+  }
+}
+
+.option-card.option-active {
+  opacity: 1;
+}
+
+.modal-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5%;
+  // justify-content: space-between;
+  // flex-wrap: wrap;
+  // margin: 20px 0;
+  // font-family: "Libre Franklin", "sans-serif";
+  // text-transform: uppercase;
+  // background-color: $light-green;
+  // color: $primary;
+}
+
+.form-check, .form-check-type, .form-check-fun, .form-check-interest, .form-check-sexy, .form-check-random {
+  min-width: 24%;
+  min-height: 5em;
+
+  // border-radius: 5px;
+  // flex: 0 0 30%;
+  // text-align: center;
+  // &:hover {
+  //   opacity: 1;
+  // }
+  // &.active {
+  // opacity: 1;
+  // }
+}

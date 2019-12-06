@@ -1,0 +1,20 @@
+$(document).ready(function(){
+  $(".form-check-input-type").click(function(){
+    $('.form-check-type').toggleClass("option-active");
+  });
+  $(".form-check-input-fun").click(function(){
+    $('.form-check-fun').toggleClass("option-active");
+  });
+  $(".form-check-input-sexy").click(function(){
+    $('.form-check-sexy').toggleClass("option-active");
+  });
+  $(".form-check-input-interest").click(function(){
+    $('.form-check-interest').toggleClass("option-active");
+  });
+  $(".form-check-input-random").click(function(){
+    $('.form-check-random').toggleClass("option-active");
+  });
+  $(".form-check-input-background").click(function(){
+    $('.form-check-background').toggleClass("option-active");
+  });
+});
