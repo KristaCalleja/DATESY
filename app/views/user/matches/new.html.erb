@@ -6,12 +6,10 @@
   <ul>
     <% @available_matchees.each do |matchee| %>
       <li data-id=<%= matchee.id %>>
-        <p><%= "#{matchee.name} - #{matchee.age} years old"  %></p>
-        <p><%= matchee.description %></p>
+        <p><%= render "shared/card", matchee: matchee %></p>
         <!-- Behavior of reject! -->
         <!-- Remove element from the list -->
         <%= render "shared/modal_reject", match: @match, matchee: matchee %>
-
         <!-- Behavior of accept! -->
         <!-- Trigger the modal form -->
         <!-- Fill the matchee_id in the form, with the selected matchee id -->
