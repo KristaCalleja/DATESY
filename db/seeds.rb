@@ -6,7 +6,7 @@ User.destroy_all
 puts "Creating users..."
 jordan = User.create!(
   name: 'Jordan',
-  photo: 'https://i.imgur.com/BaWnqU8.jpg ',
+  photo: '',
   age: 29,
   description: 'I am a nurse by profession, but my guitar is my passion. I am looking for a girl who can be my life partner.' ,
   gender: '',
@@ -36,7 +36,7 @@ harley = User.create!(
   )
 ali = User.create!(
   name: 'Ali',
-  photo: 'https://www.girlsaskguys.com/img/3438112',
+  photo: 'https://i.imgur.com/YmMzn2A.jpg',
   age: 23,
   description:'I love reading manga, I\'m crazy about japanese culture and I attend ALL cosplay events. I\'m a cat person, Goku and I would love to meet you! ^.^',
   gender:'',
@@ -46,7 +46,7 @@ ali = User.create!(
   )
 skyler = User.create!(
   name: 'Skyler',
-  photo: 'https://i.imgur.com/YmMzn2A.jpg',
+  photo: 'https://i.imgur.com/BaWnqU8.jpg',
   age: 24,
   description: 'I am a huge college football fan, and an owner of one lucky labrador, Logan. I hate cooking! Let\'s go for pizza tonight!' ,
   gender: ' ',
