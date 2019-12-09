@@ -1,3 +1,14 @@
+.cards {
+  position: relative;
+  height: calc(100vh - 72px);
+}
+
+.card {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 .card-body {
   background-color: $primary;
   color: $off-white;
