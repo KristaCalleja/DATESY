@@ -18,5 +18,8 @@ Rails.application.routes.draw do
     resources :matches, only: [:index] do
       post :status_change
     end
+
+  get '/redirect', to: 'friends#redirect', as: 'redirect'
+  get '/callback', to: 'friends#callback', as: 'callback'
   end
 end
