@@ -1,20 +1,24 @@
-<div class="container">
+<div class="cards">
   <% @available_matchees.each do |matchee| %>
     <div class="card" data-id=<%= matchee.id %>>
-      <%= image_tag matchee.photo, style:"width: 273px;" %>
+      <%= image_tag matchee.photo, class: 'img-fluid' %>
       <div class="card-body">
         <%= render "shared/card", matchee: matchee %>
         <!-- Behavior of reject! -->
         <!-- Remove element from the list -->
 
         <div class="d-flex justify-content-between">
-          <%= render "shared/modal_reject", match: @match, matchee: matchee %>
+          <%= simple_form_for [@friend, @match], url: user_friend_matches_path do |f| %>
+            <%= f.input :matchee_id, as: :hidden, input_html: { value: matchee.id } %>
+            <%= f.input :status, as: :hidden, input_html: { value: 'matchmaker_rejected' } %>
+            <%= f.button :submit, 'Reject!', class: "btn btn-primary" %>
+          <% end %>
           <!-- Behavior of accept! -->
           <!-- Trigger the modal form -->
           <!-- Fill the matchee_id in the form, with the selected matchee id -->
           <%= render "shared/match_button_with_modal", match: @match, friend: @friend, matchee: matchee %>
         </div>
       </div>
-    </li>
+    </div>
   <% end %>
 </div>
