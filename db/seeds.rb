@@ -36,7 +36,7 @@ harley = User.create!(
   )
 ali = User.create!(
   name: 'Ali',
-  photo: '',
+  photo: 'https://unsplash.com/photos/4IbpiCupGOE',
   age: 24,
   description:'I love reading manga, I\'m crazy about japanese culture and I attend ALL cosplay events. I\'m a cat person, Goku and I would love to meet you! ^.^',
   gender:'',
@@ -56,7 +56,7 @@ skyler = User.create!(
   )
 river = User.create!(
   name: 'River',
-  photo: '',
+  photo: 'https://unsplash.com/photos/rDEOVtE7vOs',
   age: 29,
   description:'I enjoy camping and spending time outside surrounded by nature. I like eating burnt marshmallows over a fire. Write to me!',
   gender:'',
@@ -96,7 +96,7 @@ remi = User.create!(
   )
 quinn = User.create!(
   name: 'Quinn',
-  photo: 'https://i.imgur.com/hh0xrh4.jpg',
+  photo: 'https://unsplash.com/photos/95UF6LXe-Lo',
   age: 27,
   description: 'My favourite time of the day is sunrise. Be it weekend or weekday, 5am is my time to warm up for my daily 2km run at Aterro. Looking for another sporty aficionado. Contact me now!' ,
   gender: ' ',
@@ -136,7 +136,7 @@ drew = User.create!(
   )
 blair = User.create!(
     name: 'Blair',
-  photo: '',
+  photo: 'https://unsplash.com/photos/_M6gy9oHgII',
   age: 29,
   description:'I\'m into grunge music. This says a lot about me. So I won\'t add more.',
   gender:'',
