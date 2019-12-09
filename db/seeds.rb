@@ -17,11 +17,10 @@ jordan = User.create!(
 milene = User.create!(
   name: 'Milene'
   photo: '',
-  age: 26
-  description:'',
+  age: 26,
+  description:'I\'m a law and business graduate. I\'m bubbly and fun to be with. I\'m full of ideas and I recently founded a subscription box business. I\'m here on Datesy because I want to meet like-minded people, and who are truly honest.',
   gender:'',
-  sexual_orientation:'I\'m a law and business graduate. I\'m bubbly and fun to be with. I\'m full of ideas and I recently founded a subscription box business. I\'m here on Datesy because I want to meet like-minded people, and who are truly honest.',
-  email: 'user2@user.com',
+  sexual_orientation:'',
   password: '123456'
   )
 harley = User.create!(
