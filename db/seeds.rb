@@ -28,7 +28,7 @@ harley = User.create!(
   name: 'Harley',
   photo: 'https://i.imgur.com/hh0xrh4.jpg',
   age: 31,
-  description: 'What do you think of Jane Austen and HP Lovecraft? I\'m a mixed bag... I love bagels and coffee. Let\'s sit and discuss books' ,
+  description: 'What do you think of Jane Austen and HP Lovecraft? I\'m a mixed bag... I love bagels and coffee.  I am a staunch believer that a book cannot be judged by its cover. Let\'s sit and discuss books' ,
   gender: ' ',
   sexual_orientation: 'homo',
   email: 'user3@user.com',
@@ -36,8 +36,8 @@ harley = User.create!(
   )
 ali = User.create!(
   name: 'Ali',
-  photo: 'https://unsplash.com/photos/4IbpiCupGOE',
-  age: 24,
+  photo: 'https://www.girlsaskguys.com/img/3438112',
+  age: 23,
   description:'I love reading manga, I\'m crazy about japanese culture and I attend ALL cosplay events. I\'m a cat person, Goku and I would love to meet you! ^.^',
   gender:'',
   sexual_orientation:'',
@@ -47,7 +47,7 @@ ali = User.create!(
 skyler = User.create!(
   name: 'Skyler',
   photo: 'https://i.imgur.com/YmMzn2A.jpg',
-  age: 23,
+  age: 24,
   description: 'I am a huge college football fan, and an owner of one lucky labrador, Logan. I hate cooking! Let\'s go for pizza tonight!' ,
   gender: ' ',
   sexual_orientation: 'homo',
@@ -56,7 +56,7 @@ skyler = User.create!(
   )
 river = User.create!(
   name: 'River',
-  photo: 'https://unsplash.com/photos/rDEOVtE7vOs',
+  photo: 'https://i.imgur.com/XMCwHDt.jpg',
   age: 29,
   description:'I enjoy camping and spending time outside surrounded by nature. I like eating burnt marshmallows over a fire. Write to me!',
   gender:'',
@@ -67,41 +67,31 @@ river = User.create!(
 ariel = User.create!(
   name: 'Ariel',
   photo: 'https://i.imgur.com/id5juIo.jpg',
-  age: 30,
+  age: 28,
   description: 'Grew up in the Portland, Oregon area. Survived middle school by becoming a skater kid (still haven’t grown out of it). Now I’m trying to pay my rent, play my music, and make my way.' ,
   gender: ' ',
   sexual_orientation: 'homo',
   email: 'user7@user.com',
   password: '123456'
 )
-ellis = User.create!(
-  name: 'Ellis',
-  photo: 'https://i.imgur.com/XMCwHDt.jpg',
-  age: 29,
-  description: 'My favorite movies are The Godfather and When Harry Met Sally. I am a staunch believer that a book cannot be judged by its cover.' ,
+remi = User.create!(
+  name: 'Remi',
+  photo: 'https://i.imgur.com/UF1Zm3m.jpg',
+  age: 50,
+  description: 'I value my family and I am not ashamed to say that. Family comes first. I am looking for a genuine connection. If you want a one night stand don\'t contact me.',
   gender: ' ',
   sexual_orientation: 'hetero',
   email: 'user8@user.com',
   password: '123456'
-)
-remi = User.create!(
-  name: 'Remi',
-  photo: 'https://i.imgur.com/V0Iuqkr.jpg',
-  age: 23,
-  description: 'I value my family and I am not ashamed to say that. Family comes first. I am looking for a genuine connection. If you want a one night stand don\'t contact me.',
-  gender: ' ',
-  sexual_orientation: 'hetero',
-  email: 'user9@user.com',
-  password: '123456'
   )
 quinn = User.create!(
   name: 'Quinn',
-  photo: 'https://unsplash.com/photos/95UF6LXe-Lo',
+  photo: 'https://i.imgur.com/V0Iuqkr.jpg',
   age: 27,
   description: 'My favourite time of the day is sunrise. Be it weekend or weekday, 5am is my time to warm up for my daily 2km run at Aterro. Looking for another sporty aficionado. Contact me now!' ,
   gender: ' ',
   sexual_orientation: 'hetero',
-  email: 'user10@user.com',
+  email: 'user9@user.com',
   password: '123456'
   )
 marley = User.create!(
@@ -111,17 +101,17 @@ marley = User.create!(
   description: 'Liked my pics? Then just contact me! I work long hours, so I am mostly available to meet up only on weekends. PS: If you ask me if my fist name is Bob, I won\'t write back. Simple as that!' ,
   gender: ' ',
   sexual_orientation: 'homo',
-  email: 'user11@user.com',
+  email: 'user10@user.com',
   password: '123456'
   )
 london = User.create!(
   name: 'London',
   photo: 'https://i.imgur.com/Jahneso.jpg',
-  age: 27,
+  age: 28,
   description:'I changed my faculty of studies three times: journalism to medicine, to theology. I am still seeking more from life. What are you looking for?',
   gender:'',
   sexual_orientation:'',
-  email: 'user12@user.com',
+  email: 'user11@user.com',
   password: '123456'
   )
 drew = User.create!(
@@ -131,27 +121,27 @@ drew = User.create!(
   description:'I love children and I am looking for someone to build a family, my biological clock keeps me up at night. Let\'s have fun trying...',
   gender:'',
   sexual_orientation:'',
-  email: 'user13@user.com',
+  email: 'user12@user.com',
   password: '123456'
   )
 blair = User.create!(
     name: 'Blair',
-  photo: 'https://unsplash.com/photos/_M6gy9oHgII',
+  photo: '',
   age: 29,
   description:'I\'m into grunge music. This says a lot about me. So I won\'t add more.',
   gender:'',
   sexual_orientation:'',
-  email: 'user14@user.com',
+  email: 'user13@user.com',
   password: '123456'
   )
 spencer = User.create!(
   name: 'Spencer',
   photo: 'https://i.imgur.com/Gf69M3x.jpg',
-  age: 27,
+  age: 25,
   description: 'I am a reserved type... but a good listener. Tell me a recent idea that intrigued you..............'  ,
   gender: ' ',
   sexual_orientation: 'homo',
-  email: 'user15@user.com',
+  email: 'user14@user.com',
   password: '123456'
   )
 
