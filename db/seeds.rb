@@ -15,12 +15,13 @@ jordan = User.create!(
   password: '123456'
   )
 milene = User.create!(
-  name: 'Milene'
-  photo: '',
+  name: 'Milene',
+  photo: 'https://avatars0.githubusercontent.com/u/43370005?v=4',
   age: 26,
   description:'I\'m a law and business graduate. I\'m bubbly and fun to be with. I\'m full of ideas and I recently founded a subscription box business. I\'m here on Datesy because I want to meet like-minded people, and who are truly honest.',
   gender:'',
   sexual_orientation:'',
+  email: 'user2@user.com',
   password: '123456'
   )
 harley = User.create!(
@@ -34,7 +35,7 @@ harley = User.create!(
   password: '123456'
   )
 ali = User.create!(
-    name: 'Ali'
+  name: 'Ali',
   photo: '',
   age: 24,
   description:'I love reading manga, I\'m crazy about japanese culture and I attend ALL cosplay events. I\'m a cat person, Goku and I would love to meet you! ^.^',
@@ -54,7 +55,7 @@ skyler = User.create!(
   password: '123456'
   )
 river = User.create!(
-    name: 'River'
+  name: 'River',
   photo: '',
   age: 29,
   description:'I enjoy camping and spending time outside surrounded by nature. I like eating burnt marshmallows over a fire. Write to me!',
@@ -114,8 +115,8 @@ marley = User.create!(
   password: '123456'
   )
 london = User.create!(
-    name: 'London'
-  photo: '',
+  name: 'London',
+  photo: 'https://i.imgur.com/Jahneso.jpg',
   age: 27,
   description:'I changed my faculty of studies three times: journalism to medicine, to theology. I am still seeking more from life. What are you looking for?',
   gender:'',
@@ -124,8 +125,8 @@ london = User.create!(
   password: '123456'
   )
 drew = User.create!(
-    name: 'Drew'
-  photo: '',
+  name: 'Drew',
+  photo: 'https://i.imgur.com/0GDYHuX.jpg',
   age: 30,
   description:'I love children and I am looking for someone to build a family, my biological clock keeps me up at night. Let\'s have fun trying...',
   gender:'',
@@ -134,7 +135,7 @@ drew = User.create!(
   password: '123456'
   )
 blair = User.create!(
-    name: 'Blair'
+    name: 'Blair',
   photo: '',
   age: 29,
   description:'I\'m into grunge music. This says a lot about me. So I won\'t add more.',
