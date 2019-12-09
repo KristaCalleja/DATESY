@@ -1,7 +1,8 @@
-<div class="container">
-  <h1>Dashboard</h1>
+<div class="dashboard-container">
+  <p><%= render "shared/medium_avatar" %></p>
   <br>
-  <%= link_to 'Match friends', user_friends_path %>
+  <%= link_to 'My Matches', user_matches_path, class: "large_button" %>
   <br>
-  <%= link_to 'My Matches', user_matches_path %>
-</div>
+  <br>
+  <%= link_to "Start Matching", user_friends_path, class: "large_button" %>
+  </div>

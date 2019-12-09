@@ -1,10 +1,18 @@
 .large_button {
-  padding: 8px 24px;
-  border-radius: 4px;
+  background-color: #1B5357;
+  color: #FFFFF4;
+  padding: 8px 16px;
+  border-radius: 5px;
   transition: background 0.3s ease;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: $header-font;
+  font-size: 14px;
 }
 
 .large_button:hover {
-  background: #1BCB7F;
-  color: white;
+  background: #C8D9DA;
+  color: #FFFFF4;
+  opacity: 1;
+  text-decoration: none;
 }

@@ -1,10 +1,9 @@
 <div class="container">
-  <h1>Friends</h1>
+  <h1>Choose Your Friend</h1>
   <br>
   <% current_user.friends.each do |friend| %>
     <p>
-      <%= friend.name %>
-      <%= link_to 'Match for this fella!', new_user_friend_match_path(friend) %>
+      <%= link_to friend.name, new_user_friend_match_path(friend), class: "large_button" %>
     </p>
   <% end %>
 </div>
