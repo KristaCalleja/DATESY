@@ -21,6 +21,14 @@ class User::MatchesController < ApplicationController
     redirect_to new_user_friend_match_path(@friend)
   end
 
+  def status_change
+    @match = Match.find(params[:match_id])
+    @match.status = params[:status]
+    @match.save
+
+    redirect_to  user_matches_path
+  end
+
   private
 
   def match_params
