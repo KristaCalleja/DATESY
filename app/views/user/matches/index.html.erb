@@ -1,7 +1,25 @@
-<% @single_matches.each do |match| %>
-    <li>
-      <%= match.id %>
+===============================
+<% @matches_to_be_confirmed.each do |match| %>
+  <p> approve matchmaker choice </p>
+  <li>
+    <p> <%= match.matchee.name %> </p>
+    <p> Message: <%= match.content %> </p>
+    <p>
+      <%= link_to "Approve", user_match_status_change_path(match, status: 'friend_accepted'), class: "large_button", method: :post %>
+      <%= link_to "Refuse", user_match_status_change_path(match, status: 'friend_rejected'), class: "large_button", method: :post %>
+    </p>
+  </li>
+<% end %>
+===============================
+<% @matches_to_be_accepted.each do |match| %>
+  <p> Final Match!!!</p>
+  <li>
+    <p> <%= match.friend.name %> </p>
+    <p>
+      <%= link_to "Match", user_match_status_change_path(match, status: 'matchee_accepted'), class: "large_button", method: :post %>
+      <%= link_to "Refuse", user_match_status_change_path(match, status: 'matchee_rejected'), class: "large_button", method: :post %>
+    </p>
+  </li>
+<% end %>
+===============================
 
-
-    </li>
-  <% end %>

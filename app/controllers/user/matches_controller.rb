@@ -1,6 +1,7 @@
 class User::MatchesController < ApplicationController
   def index
-    @single_matches = current_user.potential_matches
+    @matches_to_be_confirmed = current_user.friend_matches.matchmaker_matched
+    @matches_to_be_accepted = current_user.matchee_matches.friend_accepted
   end
 
   def new
@@ -18,6 +19,14 @@ class User::MatchesController < ApplicationController
     @match.save
 
     redirect_to new_user_friend_match_path(@friend)
+  end
+
+  def status_change
+    @match = Match.find(params[:match_id])
+    @match.status = params[:status]
+    @match.save
+
+    redirect_to  user_matches_path
   end
 
   private
