@@ -96,7 +96,7 @@ quinn = User.create!(
   )
 marley = User.create!(
   name: 'Marley',
-  photo: 'https://i.imgur.com/MM3ViXf.jpg',
+  photo: 'https://i.imgur.com/NJCqPIb.jpg',
   age: 29,
   description: 'Liked my pics? Then just contact me! I work long hours, so I am mostly available to meet up only on weekends. PS: If you ask me if my fist name is Bob, I won\'t write back. Simple as that!' ,
   gender: ' ',
@@ -126,7 +126,7 @@ drew = User.create!(
   )
 blair = User.create!(
     name: 'Blair',
-  photo: '',
+  photo: 'https://i.imgur.com/MM3ViXf.jpg',
   age: 29,
   description:'I\'m into grunge music. This says a lot about me. So I won\'t add more.',
   gender:'',
