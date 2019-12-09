@@ -1,8 +1,9 @@
-<div class="container">
-  <h1>Choose Your Friend</h1>
+<div class="friend-container">
+  <h1 class="friend-h1">Choose Your Friend</h1>
   <br>
   <% current_user.friends.each do |friend| %>
-    <p>
+    <p class="friends-button">
+      <%= render "shared/medium_avatar" %>
       <%= link_to friend.name, new_user_friend_match_path(friend), class: "large_button" %>
     </p>
   <% end %>
