@@ -7,6 +7,11 @@
   position: absolute;
   height: 100%;
   width: 100%;
+  transition: transform 0.25s;
+
+  &.removed {
+    transform: translateX(-105%);
+  }
 }
 
 .card-body {
