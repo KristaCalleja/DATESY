@@ -1,7 +1,15 @@
-<% @single_matches.each do |match| %>
-    <li>
-      <%= match.id %>
+===============================
+<% @matches_to_be_confirmed.each do |match| %>
+  <li>
+    <p> matchmaker_matched</p>
+    <p> <%= match.matchee.name %> -- <%= match.status %>  </p>
+  </li>
+<% end %>
+===============================
+<% @matches_to_be_accepted.each do |match| %>
+  <li>
+    <p> friend_accepted</p>
+    <p> <%= match.friend.name %> -- <%= match.status %> </p>
+  </li>
+<% end %>
 
-
-    </li>
-  <% end %>
