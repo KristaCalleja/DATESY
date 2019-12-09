@@ -26,7 +26,7 @@ class User::MatchesController < ApplicationController
     @match.status = params[:status]
     @match.save
 
-    redirect_to  user_matches_path
+    redirect_to user_matches_path
   end
 
   private
