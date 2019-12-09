@@ -8,7 +8,7 @@
         <!-- Remove element from the list -->
 
         <div class="d-flex justify-content-between">
-          <%= simple_form_for [@friend, @match], url: user_friend_matches_path do |f| %>
+          <%= simple_form_for [@friend, @match], url: user_friend_matches_path, html: { class: 'match-reject-form' }, remote: true do |f| %>
             <%= f.input :matchee_id, as: :hidden, input_html: { value: matchee.id } %>
             <%= f.input :status, as: :hidden, input_html: { value: 'matchmaker_rejected' } %>
             <%= f.button :submit, 'Reject!', class: "btn btn-primary" %>
