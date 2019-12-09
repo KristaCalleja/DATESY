@@ -14,33 +14,32 @@ jordan = User.create!(
   email: 'user1@user.com',
   password: '123456'
   )
-quinn = User.create!(
-  name: 'Quinn',
-  photo: 'https://i.imgur.com/hh0xrh4.jpg',
-  age: 27,
-  description: 'My favourite time of the day is sunrise. Be it weekend or weekday, 5am is my time to warm up for my daily 2km run at Aterro. Looking for another sporty aficionado. Contact me now!' ,
-  gender: ' ',
-  sexual_orientation: 'hetero',
-  email: 'user2@user.com',
+milene = User.create!(
+  name: 'Milene'
+  photo: '',
+  age: 26,
+  description:'I\'m a law and business graduate. I\'m bubbly and fun to be with. I\'m full of ideas and I recently founded a subscription box business. I\'m here on Datesy because I want to meet like-minded people, and who are truly honest.',
+  gender:'',
+  sexual_orientation:'',
   password: '123456'
   )
 harley = User.create!(
   name: 'Harley',
   photo: 'https://i.imgur.com/hh0xrh4.jpg',
   age: 31,
-  description: 'Wie geht\'s? ¿Hablas español? I am Brazilian by birth but my parents are Spanish and German. I lived in the Mississippi for 8 years and I wish to go back soon. I love bagels and coffee.' ,
+  description: 'What do you think of Jane Austen and HP Lovecraft? I\'m a mixed bag... I love bagels and coffee. Let\'s sit and discuss books' ,
   gender: ' ',
   sexual_orientation: 'homo',
   email: 'user3@user.com',
   password: '123456'
   )
-spencer = User.create!(
-  name: 'Spencer',
-  photo: 'https://i.imgur.com/Gf69M3x.jpg',
-  age: 27,
-  description: 'I am a reserved type... but a good listener. Tell me a recent idea that intrigued you..............'  ,
-  gender: ' ',
-  sexual_orientation: 'homo',
+ali = User.create!(
+    name: 'Ali'
+  photo: '',
+  age: 24,
+  description:'I love reading manga, I\'m crazy about japanese culture and I attend ALL cosplay events. I\'m a cat person, Goku and I would love to meet you! ^.^',
+  gender:'',
+  sexual_orientation:'',
   email: 'user4@user.com',
   password: '123456'
   )
@@ -54,13 +53,13 @@ skyler = User.create!(
   email: 'user5@user.com',
   password: '123456'
   )
-marley = User.create!(
-  name: 'Marley',
-  photo: 'https://i.imgur.com/MM3ViXf.jpg',
+river = User.create!(
+    name: 'River'
+  photo: '',
   age: 29,
-  description: 'Liked my pics? Then just contact me! I work long hours, so I am mostly available to meet up only on weekends. PS: If you ask me if my fist name is Bob, I won\'t write back. Simple as that!' ,
-  gender: ' ',
-  sexual_orientation: 'homo',
+  description:'I enjoy camping and spending time outside surrounded by nature. I like eating burnt marshmallows over a fire. Write to me!',
+  gender:'',
+  sexual_orientation:'',
   email: 'user6@user.com',
   password: '123456'
   )
@@ -94,9 +93,69 @@ remi = User.create!(
   email: 'user9@user.com',
   password: '123456'
   )
+quinn = User.create!(
+  name: 'Quinn',
+  photo: 'https://i.imgur.com/hh0xrh4.jpg',
+  age: 27,
+  description: 'My favourite time of the day is sunrise. Be it weekend or weekday, 5am is my time to warm up for my daily 2km run at Aterro. Looking for another sporty aficionado. Contact me now!' ,
+  gender: ' ',
+  sexual_orientation: 'hetero',
+  email: 'user10@user.com',
+  password: '123456'
+  )
+marley = User.create!(
+  name: 'Marley',
+  photo: 'https://i.imgur.com/MM3ViXf.jpg',
+  age: 29,
+  description: 'Liked my pics? Then just contact me! I work long hours, so I am mostly available to meet up only on weekends. PS: If you ask me if my fist name is Bob, I won\'t write back. Simple as that!' ,
+  gender: ' ',
+  sexual_orientation: 'homo',
+  email: 'user11@user.com',
+  password: '123456'
+  )
+london = User.create!(
+    name: 'London'
+  photo: '',
+  age: 27,
+  description:'I changed my faculty of studies three times: journalism to medicine, to theology. I am still seeking more from life. What are you looking for?',
+  gender:'',
+  sexual_orientation:'',
+  email: 'user12@user.com',
+  password: '123456'
+  )
+drew = User.create!(
+    name: 'Drew'
+  photo: '',
+  age: 30,
+  description:'I love children and I am looking for someone to build a family, my biological clock keeps me up at night. Let\'s have fun trying...',
+  gender:'',
+  sexual_orientation:'',
+  email: 'user13@user.com',
+  password: '123456'
+  )
+blair = User.create!(
+    name: 'Blair'
+  photo: '',
+  age: 29,
+  description:'I\'m into grunge music. This says a lot about me. So I won\'t add more.',
+  gender:'',
+  sexual_orientation:'',
+  email: 'user14@user.com',
+  password: '123456'
+  )
+spencer = User.create!(
+  name: 'Spencer',
+  photo: 'https://i.imgur.com/Gf69M3x.jpg',
+  age: 27,
+  description: 'I am a reserved type... but a good listener. Tell me a recent idea that intrigued you..............'  ,
+  gender: ' ',
+  sexual_orientation: 'homo',
+  email: 'user15@user.com',
+  password: '123456'
+  )
 
 puts "Creating frienships..."
-jordan.friends << quinn
+jordan.friends << milene
 harley.friends << ariel
 marley.friends << skyler
 
