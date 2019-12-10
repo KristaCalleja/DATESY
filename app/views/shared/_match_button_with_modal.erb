@@ -1,8 +1,8 @@
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#matchee-<%= matchee.id %>">
   <i class="fas fa-heart fa-2x"></i>
 </button>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="matchee-<%= matchee.id %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -59,9 +59,7 @@
           </div>
           <%= f.input :matchee_id, as: :hidden, input_html: { value: matchee.id } %>
           <%= f.input :status, as: :hidden, input_html: { value: 'matchmaker_matched' } %>
-
           <%= f.input :content, label: 'Write a message to your friend', as: :text, input_html: { row: 3 } %>
-
           <%= f.button :submit, 'Send Match', class: "large_button" %>
         <% end %>
       </div>
