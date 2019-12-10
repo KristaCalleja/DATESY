@@ -1,0 +1,20 @@
+<h1>Date Availability Pick</h1>
+
+<%= simple_form_for :availability_picks, url: user_availability_picks_path do |f| %>
+  <%= simple_fields_for :availability_thursday do |thursday| %>
+    <h2>thursday</h2>
+    <%= thursday.input :times, collection: [12, 20], as: :check_boxes %>
+  <% end %>
+
+  <%= simple_fields_for :availability_friday do |friday| %>
+    <h2>Friday</h2>
+    <%= friday.input :times, collection: [12, 20], as: :check_boxes %>
+  <% end %>
+
+  <%= simple_fields_for :availability_saturday do |saturday| %>
+    <h2>saturday</h2>
+    <%= saturday.input :times, collection: [12, 20], as: :check_boxes %>
+  <% end %>
+
+  <%= f.submit %>
+<% end %>

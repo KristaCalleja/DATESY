@@ -14,6 +14,7 @@ jordan = User.create!(
   email: 'user1@user.com',
   password: '123456'
   )
+
 milene = User.create!(
   name: 'Milene',
   photo: 'https://avatars0.githubusercontent.com/u/43370005?v=4',
