@@ -3,10 +3,13 @@ class User::AvailabilityPicksController < ApplicationController
   end
 
   def create
-    raise
+    current_user.availabilities.thursday.update(times: params[:availability_thursday][:times].reject(&:empty?))
+    current_user.availabilities.friday.update(times: params[:availability_friday][:times].reject(&:empty?))
+    current_user.availabilities.saturday.update(times: params[:availability_saturday][:times].reject(&:empty?))
+<<<<<<< Updated upstream
 
-    # current_user.availabilities.thursday.update()
-    # current_user.availabilities.friday.update()
-    # current_user.availabilities.saturday.update()
+=======
+>>>>>>> Stashed changes
+    redirect_to root_path
   end
 end
