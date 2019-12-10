@@ -8,4 +8,10 @@
   <br>
   <br>
   <%= link_to('Sign Out', destroy_user_session_path, method: :delete, class: "large_button") %>
+  <br>
+  <br>
+  <%= link_to "Availability", new_user_availability_pick_path, class: "large_button" %>
+  <p> Thursday <%= current_user.availabilities.thursday.times %> </p>
+  <p> Friday <%= current_user.availabilities.friday.times %> </p>
+  <p> Saturday <%= current_user.availabilities.saturday.times %> </p>
   </div>
