@@ -146,7 +146,7 @@ spencer = User.create!(
   )
 
 puts "Creating frienships..."
-jordan.friends << milene
+jordan.friends << [milene, ariel, blair]
 harley.friends << ariel
 marley.friends << skyler
 
