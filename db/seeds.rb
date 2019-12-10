@@ -163,16 +163,16 @@ secondmatch = Match.create!(
   matchmaker: milene,
   status: 'matchmaker_matched'
 )
-secondmatch = Match.create!(
+thirdmatch = Match.create!(
   matchee: marley,
   friend: milene,
   matchmaker: jordan,
   status: 'friend_accepted'
 )
-secondmatch = Match.create!(
+fourthmatch = Match.create!(
   matchee: marley,
-  friend: milene,
-  matchmaker: jordan,
+  friend: jordan,
+  matchmaker: milene,
   status: 'matchee_accepted'
 )
 
