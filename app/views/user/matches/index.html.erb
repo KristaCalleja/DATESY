@@ -1,22 +1,27 @@
-<% @matches_to_be_confirmed.each do |match| %>
-  <p> Approve Matchmaker Choice </p>
-  <li>
-    <p> <%= match.matchee.name %> </p>
-    <p> Message: <%= match.content %> </p>
-    <p>
-      <%= link_to "Approve", user_match_status_change_path(match, status: 'friend_accepted'), class: "large_button", method: :post %>
-      <%= link_to "Refuse", user_match_status_change_path(match, status: 'friend_rejected'), class: "large_button", method: :post %>
-    </p>
-  </li>
-<% end %>
-
-<% @matches_to_be_accepted.each do |match| %>
-  <p> Final Match!!!</p>
-  <li>
-    <p> <%= match.friend.name %> </p>
-    <p>
-      <%= link_to "Match", user_match_status_change_path(match, status: 'matchee_accepted'), class: "large_button", method: :post %>
-      <%= link_to "Refuse", user_match_status_change_path(match, status: 'matchee_rejected'), class: "large_button", method: :post %>
-    </p>
-  </li>
-<% end %>
+<div class="cards">
+  <% @matches.each do |match| %>
+    <% if current_user.id == match.friend.id %>
+      <div class="card" data-id=<%= match.id %>>
+        <%= image_tag match.matchee.photo, class: 'img-fluid' %>
+        <div class="card-body">
+          <%= render "shared/card", matchee: match.matchee %>
+          <div class="d-flex justify-content-between">
+            <%= link_to "Refuse", user_match_status_change_path(match, status: 'friend_rejected'), class: "large_button", method: :post %>
+            <%= link_to "Approve", user_match_status_change_path(match, status: 'friend_accepted'), class: "large_button", method: :post %>
+          </div>
+        </div>
+      </div>
+    <% else %>
+      <div class="card" data-id=<%= match.id %>>
+        <%= image_tag match.friend.photo, class: 'img-fluid' %>
+        <div class="card-body">
+          <%= render "shared/card", matchee: match.friend %>
+          <div class="d-flex justify-content-between">
+            <%= link_to "Refuse", user_match_status_change_path(match, status: 'matchee_rejected'), class: "large_button", method: :post %>
+            <%= link_to "Match", user_match_status_change_path(match, status: 'matchee_accepted'), class: "large_button", method: :post %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

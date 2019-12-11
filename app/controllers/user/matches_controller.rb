@@ -1,7 +1,6 @@
 class User::MatchesController < ApplicationController
   def index
-    @matches_to_be_confirmed = current_user.friend_matches.matchmaker_matched
-    @matches_to_be_accepted = current_user.matchee_matches.friend_accepted
+    @matches = current_user.potential_matches
   end
 
   def new

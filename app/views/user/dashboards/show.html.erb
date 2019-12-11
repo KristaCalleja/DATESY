@@ -2,9 +2,10 @@
 
   <p><%= render "shared/medium_avatar", user: current_user %></p>
   <br>
-==============================================
+======================
 Single
-==============================================
+======================
+
   <br>
   <br>
   <%= link_to 'My Matches', user_matches_path, class: "large_button" %>
@@ -21,9 +22,9 @@ Single
   <p> Friday <%= current_user.availabilities.friday.times %> </p>
   <br>
   <p> Saturday <%= current_user.availabilities.saturday.times %> </p>
-==============================================
+======================
 Matchmaker
-==============================================
+======================
   <br>
   <br>
   <% current_user.friends.each do |friend| %>
@@ -34,7 +35,7 @@ Matchmaker
      <p> <%= link_to "Exclude!", new_user_friend_match_path(friend), class: "large_button" %> </p>
     </p>
   <% end %>
-==============================================
+=====================
   <br>
   <br>
   <%= link_to('Sign Out', destroy_user_session_path, method: :delete, class: "large_button") %>
