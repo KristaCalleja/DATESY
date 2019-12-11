@@ -31,6 +31,10 @@ class User < ApplicationRecord
     friend_matches.matchmaker_matched + matchee_matches.friend_accepted
   end
 
+  def official_dates
+    friend_matches.matchee_accepted + matchee_matches.matchee_accepted
+  end
+
   private
 
   def create_availabilities

@@ -16,6 +16,8 @@ Rails.application.routes.draw do
       resources :matches, only: [:new, :create]
     end
 
+    resources :dates, only: [:index]
+
     resources :matches, only: [:index] do
       post :status_change
     end
