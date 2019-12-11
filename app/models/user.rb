@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  attr_accessor :friend_id
+
   # Matches I made for somebody
   has_many :matchmaker_matches, foreign_key: :matchmaker_id, class_name: "Match"
 
@@ -15,8 +17,10 @@ class User < ApplicationRecord
 
   has_many :friendships
   has_many :friends, through: :friendships
-
   has_many :availabilities, dependent: :destroy
+
+
+  after_create :set_up_friendship, if: :friend_id 
 
   after_create :create_availabilities
 
@@ -41,5 +45,9 @@ class User < ApplicationRecord
     Availability.create(user: self, weekday: 'thursday')
     Availability.create(user: self, weekday: 'friday')
     Availability.create(user: self, weekday: 'saturday')
+  end
+    
+  def set_up_friendship
+    Friendship.create(user_id: self.id, friend_id: friend_id)
   end
 end
