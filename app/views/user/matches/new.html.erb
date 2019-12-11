@@ -11,7 +11,10 @@
           <%= simple_form_for [@friend, @match], url: user_friend_matches_path, html: { class: 'match-reject-form' }, remote: true do |f| %>
             <%= f.input :matchee_id, as: :hidden, input_html: { value: matchee.id } %>
             <%= f.input :status, as: :hidden, input_html: { value: 'matchmaker_rejected' } %>
-            <%= f.button :submit, 'Reject!', class: "btn btn-primary" %>
+            <%= f.button :button, class: "btn btn-primary" do %>
+              <i class="fas fa-times"></i>
+            <% end %>
+
           <% end %>
           <!-- Behavior of accept! -->
           <!-- Trigger the modal form -->

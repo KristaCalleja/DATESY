@@ -1,0 +1,10 @@
+<h1> Dates </h1>
+<% @dates.each do |date| %>
+  <li>
+  <% if current_user.id == date.friend.id %>
+    <p> <%= date.matchee.name %> </p>
+  <% else%>
+    <p> <%= date.friend.name %> </p>
+  <% end %>
+  </li>
+<% end %>

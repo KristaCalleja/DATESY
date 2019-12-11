@@ -1,0 +1,28 @@
+<div class="availability">
+<h1>My Date Availability</h1>
+<%= simple_form_for :availability_picks, url: user_availability_picks_path do |f| %>
+<div class="availability-options">
+  <div class="availability-thursday">
+  <%= simple_fields_for :availability_thursday do |thursday| %>
+    <h3>Thursday</h3>
+    <%= thursday.input :times, collection: ["12:00pm", "8:00pm"], as: :check_boxes %>
+  <% end %>
+  </div>
+
+  <div class="availability-friday">
+  <%= simple_fields_for :availability_friday do |friday| %>
+    <h3>Friday</h3>
+    <%= friday.input :times, collection: ["12:00pm", "8:00pm"], as: :check_boxes %>
+  <% end %>
+  </div>
+
+  <div class="availability-saturday">
+  <%= simple_fields_for :availability_saturday do |saturday| %>
+    <h3>Saturday</h3>
+    <%= saturday.input :times, collection: ["12:00pm", "8:00pm"], as: :check_boxes %>
+  <% end %>
+  </div>
+</div>
+  <%= f.button :submit, 'Update', class: "large_button" %>
+<% end %>
+</div>
