@@ -1,0 +1,30 @@
+.icon_button {
+  width: 250px;
+  padding: 8px 16px;
+  border-radius: $border-radius;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: $header-font;
+  font-size: 15px;
+  display: inline-block;
+  border: none;
+  color: white;
+  display: block;
+  margin-bottom: 25px
+}
+
+.icon_button_ical {
+  background-color: black;
+}
+
+.icon_button_gcalendar {
+  background-color: #4285f4;
+}
+
+.icon_button_outlook {
+  background-color: #0078d7;
+}
+
+.icon_button_yahoo {
+  background-color: #410093;
+}

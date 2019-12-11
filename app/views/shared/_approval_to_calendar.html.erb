@@ -1,11 +1,11 @@
-<h3>ADD THE EVENT TO YOUR CALENDAR</h3>
-  <div class="container">
-    <div class="row justify-content-center">
-      <ul>
-        <li><button class="btn-flat">ICAL</button></li>
-        <li><%= link_to "Google calendar", "user_redirect_path", class: "button" %></li>
-        <li><button>Outlook</button></li>
-        <li><button>Yahoo</button></li>
-      </ul>
-    </div>
+<h3>ADD EVENT TO YOUR CALENDAR</h3>
+<div class="container">
+  <div class="row justify-content-center">
+    <ul>
+      <button class="icon_button icon_button_ical"><i class="fab fa-1x fa-apple"></i> ICAL</button>
+      <%= link_to "<i class='fab fa-google'></i> Google calendar".html_safe, user_redirect_path, class: "icon_button icon_button_gcalendar" %>
+      <button class="icon_button icon_button_outlook"><i class="fab fa-windows"></i> Outlook</button>
+      <button class="icon_button icon_button_yahoo"><i class="fab fa-yahoo"></i>! Yahoo</button>
+    </ul>
   </div>
+</div>
