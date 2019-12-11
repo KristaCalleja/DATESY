@@ -1,0 +1,9 @@
+<h1>User::Dates#new</h1>
+<p>Find me in app/views/user/dates/new.html.erb</p>
+<%= simple_form_for [@match, @date], url: user_match_dates_path(@match) do |f| %>
+  <%= f.input :start_at,
+              as: :radio_buttons,
+              collection: humanize_date_collection(@match.friend.available_times_this_week) %>
+  <%= f.submit %>
+<% end %>
+

@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :user do
+    get 'dates/new'
+  end
   devise_for :users
 
   devise_scope :user do
@@ -19,6 +22,7 @@ Rails.application.routes.draw do
     resources :dates, only: [:index]
 
     resources :matches, only: [:index] do
+      resources :dates, only: [:new, :create]
       post :status_change
     end
 
