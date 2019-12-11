@@ -3,8 +3,10 @@
   <li>
   <% if current_user.id == date.friend.id %>
     <p> <%= date.matchee.name %> </p>
+    <p> <%= date.match_date.start_at %> </p>
   <% else%>
     <p> <%= date.friend.name %> </p>
+    <p> <%= date.match_date.start_at %> </p>
   <% end %>
   </li>
 <% end %>
