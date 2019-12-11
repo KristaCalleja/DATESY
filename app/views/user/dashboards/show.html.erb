@@ -1,9 +1,9 @@
 <div class="dashboard-container">
   <br><br>
   <h2> <%= current_user.name %> </h2>
+  <h3> Joined December 2019 </h3>
   <p><%= render "shared/medium_avatar", user: current_user %></p>
   <p><%= render "shared/single_button" %><%= render "shared/matchmaker_button" %></p>
-  <h3> Joined December 2019 </h3>
   <br>
   <%= link_to 'Review My Matches', user_matches_path, class: "large_button" %>
   <br>
