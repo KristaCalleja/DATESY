@@ -16,6 +16,10 @@ class User < ApplicationRecord
   has_many :friendships
   has_many :friends, through: :friendships
 
+  has_many :availabilities, dependent: :destroy
+
+  after_create :create_availabilities
+
   def available_matchees_for(friend)
     self.class.where.not(id: [id, friend.id]).
       where.not(id: friend.matchee_matches.map {|match| match.friend_id}).
@@ -25,5 +29,17 @@ class User < ApplicationRecord
   def potential_matches
     # Rename the method and add additional user
     friend_matches.matchmaker_matched + matchee_matches.friend_accepted
+  end
+
+  def official_dates
+    friend_matches.matchee_accepted + matchee_matches.matchee_accepted
+  end
+
+  private
+
+  def create_availabilities
+    Availability.create(user: self, weekday: 'thursday')
+    Availability.create(user: self, weekday: 'friday')
+    Availability.create(user: self, weekday: 'saturday')
   end
 end

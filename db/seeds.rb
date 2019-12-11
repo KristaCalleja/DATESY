@@ -14,6 +14,7 @@ jordan = User.create!(
   email: 'user1@user.com',
   password: '123456'
   )
+
 milene = User.create!(
   name: 'Milene',
   photo: 'https://avatars0.githubusercontent.com/u/43370005?v=4',
@@ -34,8 +35,8 @@ harley = User.create!(
   email: 'user3@user.com',
   password: '123456'
   )
-ali = User.create!(
-  name: 'Ali',
+emma = User.create!(
+  name: 'Emma',
   photo: 'https://i.imgur.com/YmMzn2A.jpg',
   age: 23,
   description:'I love reading manga, I\'m crazy about japanese culture and I attend ALL cosplay events. I\'m a cat person <3, Goku and I would love to meet you! ^.^',
@@ -44,8 +45,8 @@ ali = User.create!(
   email: 'user4@user.com',
   password: '123456'
   )
-skyler = User.create!(
-  name: 'Skyler',
+james = User.create!(
+  name: 'James',
   photo: 'https://i.imgur.com/BaWnqU8.jpg',
   age: 24,
   description: 'I am a huge college football fan, and an owner of one lucky labrador, Logan. I hate cooking! Let\'s go for pizza tonight!' ,
@@ -134,8 +135,8 @@ blair = User.create!(
   email: 'user13@user.com',
   password: '123456'
   )
-spencer = User.create!(
-  name: 'Spencer',
+olivia = User.create!(
+  name: 'Olivia',
   photo: 'https://i.imgur.com/Gf69M3x.jpg',
   age: 25,
   description: 'I am a reserved type... but a good listener. Tell me a recent idea that intrigued you.............'  ,
@@ -146,9 +147,37 @@ spencer = User.create!(
   )
 
 puts "Creating frienships..."
-jordan.friends << milene
+jordan.friends << [milene, ariel, blair]
 harley.friends << ariel
-marley.friends << skyler
+marley.friends << james
 
+puts "Creating matches..."
+firstmatch = Match.create!(
+  matchee: olivia,
+  friend: jordan,
+  matchmaker: milene,
+  status: 'matchmaker_matched'
+)
+secondmatch = Match.create!(
+  matchee: emma,
+  friend: jordan,
+  matchmaker: milene,
+  status: 'matchmaker_matched'
+)
+thirdmatch = Match.create!(
+  matchee: marley,
+  friend: milene,
+  matchmaker: jordan,
+  status: 'friend_accepted'
+)
+fourthmatch = Match.create!(
+  matchee: marley,
+  friend: jordan,
+  matchmaker: milene,
+  status: 'matchee_accepted'
+)
 
 puts "Seed finished! Lots of connections to be made here!"
+
+
+

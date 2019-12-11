@@ -1,0 +1,30 @@
+.content {
+  position: fixed;
+  color: $off-white;
+  padding: 320px;
+  background-color: $light-green;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url("https://i.imgur.com/4x2Mp4F.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
+.content h1 {
+  font-family: $header-font;
+  font-size: 50px;
+  color: #e9F6BF;
+  text-transform: uppercase;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.content p {
+  font-family: $base-font;
+  color: #C8D9DA;
+  font-size: 25px;
+  text-align: center;
+}

@@ -1,0 +1,53 @@
+.form-inputs {
+  background-color: $off-white;
+}
+
+.login-form {
+  background-color: $off-white;
+}
+
+.login {
+  background-color: $off-white;
+}
+
+.h2 {
+  font-family: $header-font;
+  text-transform: uppercase;
+}
+
+.availability {
+  background-color: #C8D9DA;
+  color: $primary;
+}
+
+.availability, .h1 {
+  font-family: $header-font;
+  text-transform: uppercase;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 20px;
+}
+
+.availability, .h3 {
+  font-size: 14px;
+}
+
+.availability, .form-check {
+  background-color: $light-green;
+  color: $primary;
+  text-align: center;
+  padding: 0px !important;
+  width: 100%;
+}
+
+.availability-options {
+  background-color: $primary;
+  color: $off-white;
+  text-align: center;
+  input {
+    display: none;
+  }
+}
+
+.availability-thursday, .availability-friday, .availability-saturday {
+}
