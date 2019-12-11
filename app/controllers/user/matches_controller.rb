@@ -24,8 +24,11 @@ class User::MatchesController < ApplicationController
     @match = Match.find(params[:match_id])
     @match.status = params[:status]
     @match.save
-
-    redirect_to user_matches_path
+    if params[:status] == "matchee_accepted"
+      redirect_to new_user_match_date_path
+    else
+      redirect_to user_matches_path
+    end
   end
 
   private

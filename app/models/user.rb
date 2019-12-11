@@ -19,8 +19,13 @@ class User < ApplicationRecord
   has_many :friends, through: :friendships
   has_many :availabilities, dependent: :destroy
 
+  has_many :friend_dates, through: :friend_matches, source: :match_date
+  has_many :matchee_dates, through: :matchee_matches, source: :match_date
+  def dates
+    friend_dates.or(matchee_dates)
+  end
 
-  after_create :set_up_friendship, if: :friend_id 
+  after_create :set_up_friendship, if: :friend_id
 
   after_create :create_availabilities
 
@@ -39,6 +44,15 @@ class User < ApplicationRecord
     friend_matches.matchee_accepted + matchee_matches.matchee_accepted
   end
 
+  def available_times_this_week
+    availabilities.map do |availability|
+      days_from_monday = Date::DAYNAMES.index(availability.weekday.capitalize) - 1
+      availability.times.map do |hour|
+        DateTime.now.next_week.advance(days: days_from_monday, hours: hour.to_i)
+      end
+    end.flatten
+  end
+
   private
 
   def create_availabilities
@@ -46,7 +60,7 @@ class User < ApplicationRecord
     Availability.create(user: self, weekday: 'friday')
     Availability.create(user: self, weekday: 'saturday')
   end
-    
+
   def set_up_friendship
     Friendship.create(user_id: self.id, friend_id: friend_id)
   end

@@ -1,0 +1,11 @@
+<h1>Choose the day</h1>
+<br>
+<br>
+<h2> Location: Astor Bar </h2>
+<%= simple_form_for [@match, @date], url: user_match_dates_path(@match) do |f| %>
+  <%= f.input :start_at,
+              as: :radio_buttons,
+              collection: humanize_date_collection(@match.friend.available_times_this_week) %>
+  <%= f.submit %>
+<% end %>
+
