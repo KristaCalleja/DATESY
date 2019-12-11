@@ -1,4 +1,12 @@
 <div class="dashboard-container">
+  <div class="container">
+    <div class="slick">
+      <% current_user.friends.each do |friend| %>
+        <%= render 'friends/card', friend: friend %>
+      <% end %>
+    </div>
+  </div>
+
   <br><br>
   <h2> <%= current_user.name %> </h2>
   <h3> Joined December 2019 </h3>
@@ -24,21 +32,3 @@
   <br>
   <br>
   <%= link_to('Sign Out', destroy_user_session_path, method: :delete, class: "large_button") %>
-  <br>
-  <br>
-  <br>
-
-  <h2>My Friends</h2>
-  <br>
-  <% current_user.friends.each do |friend| %>
-    <p class="friends-button">
-      <%= render "shared/medium_avatar", user: friend %>
-    <h2> <%= friend.name %></h2>
-    <br>
-    <p> <%= link_to "<i class='fas fa-comments fa-1x'></i> Chat with #{friend.name}".html_safe, new_user_friend_match_path(friend), class: "large_button" %> </p>
-    <p> <%= link_to "<i class='fas fa-heart fa-1x'></i> Find #{friend.name} Matches".html_safe, new_user_friend_match_path(friend), class: "large_button" %> </p>
-    <p> <%= link_to "<i class='fas fa-trash-alt fa-1x'></i> Delete Matchmaker".html_safe, new_user_friend_match_path(friend), class: "large_button" %> </p>
-    </p>
-  <% end %>
-  <br>
-  <br>
