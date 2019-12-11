@@ -13,6 +13,8 @@ class User::DatesController < ApplicationController
     @date = MatchDate.new(date_params)
 
     if @date.save
+
+      Match.find(params[:match_id]).update(match_date_id: @date.id)
       redirect_to root_path
     else
       render :new
