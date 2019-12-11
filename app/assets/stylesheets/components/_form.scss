@@ -20,7 +20,7 @@
   color: $primary;
 }
 
-.availability, .h1 {
+.availability, h1 {
   font-family: $header-font;
   text-transform: uppercase;
   padding-top: 30px;
@@ -28,12 +28,12 @@
   font-size: 20px;
 }
 
-.availability, .h3 {
+.availability, h2 {
   font-size: 14px;
 }
 
 .availability, .form-check {
-  background-color: $light-green;
+  background-color: $teal;
   color: $primary;
   text-align: center;
   padding: 0px !important;
@@ -41,13 +41,16 @@
 }
 
 .availability-options {
-  background-color: $primary;
-  color: $off-white;
+  background-color: $teal;
+  color: $primary;
   text-align: center;
-  input {
-    display: none;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5%;
 }
 
 .availability-thursday, .availability-friday, .availability-saturday {
+  min-width: 24%;
+  max-width: 100%;
+  min-height: 5em;
 }
