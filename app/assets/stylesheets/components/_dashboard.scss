@@ -1,6 +1,14 @@
 .dashboard-container {
   background-color: #C8D9DA;
   border-radius: 5px;
-  padding: 100px;
+  padding: 15px;
+  text-align: center;
 }
 
+.dashboard-container, h2 {
+  font-size: 24px;
+}
+
+.dashboard-container, h3 {
+  font-size: 14px;
+}

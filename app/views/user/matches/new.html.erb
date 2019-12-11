@@ -3,7 +3,7 @@
     <div class="card" data-id=<%= matchee.id %>>
       <%= image_tag matchee.photo, class: 'img-fluid' %>
       <div class="card-body">
-        <%= render "shared/card", matchee: matchee %>
+        <%= render "shared/matchmaker_card", matchee: matchee %>
         <!-- Behavior of reject! -->
         <!-- Remove element from the list -->
 
@@ -12,7 +12,7 @@
             <%= f.input :matchee_id, as: :hidden, input_html: { value: matchee.id } %>
             <%= f.input :status, as: :hidden, input_html: { value: 'matchmaker_rejected' } %>
             <%= f.button :button, class: "btn btn-primary" do %>
-              <i class="fas fa-times"></i>
+              <i class="fas fa-times fa-2x"></i>
             <% end %>
 
           <% end %>
