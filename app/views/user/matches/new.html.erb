@@ -3,7 +3,7 @@
     <div class="card" data-id=<%= matchee.id %>>
       <%= image_tag matchee.photo, class: 'img-fluid' %>
       <div class="card-body">
-        <%= render "shared/matchmaker_card", matchee: matchee %>
+        <%= render "shared/matchmaker_card", matchee: matchee, display_button: false %>
         <!-- Behavior of reject! -->
         <!-- Remove element from the list -->
 

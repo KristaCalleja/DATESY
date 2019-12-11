@@ -1,4 +1,7 @@
 <!-- This card receives a matchee (User) from MatchesController#new -->
+<% if display_button %>
+  <a class="btn btn-lg matchmaker_type_button" style="background-color: <%= color %>;"><%= text %></a>
+<% end %>
 <p class="card-name"><strong><%= matchee.name %></strong></p>
 <p class="card-text"> <%= matchee.description %></p>
 <p class="card-age"><%= matchee.age %> years old</p>
