@@ -12,8 +12,9 @@ jordan = User.create!(
   gender: 'female',
   sexual_orientation: 'bisexual',
   email: 'user1@user.com',
-  password: '123456'
-  )
+  password: '123456',
+  location: 'Taberna da Glória'
+)
 
 milene = User.create!(
   name: 'Milene',
@@ -23,8 +24,10 @@ milene = User.create!(
   gender:'female',
   sexual_orientation:'hetero',
   email: 'user2@user.com',
-  password: '123456'
-  )
+  password: '123456',
+  location: 'Maya'
+)
+
 harley = User.create!(
   name: 'Harley',
   photo: 'https://i.imgur.com/hh0xrh4.jpg',
@@ -33,8 +36,9 @@ harley = User.create!(
   gender: 'female',
   sexual_orientation: 'bisexual',
   email: 'user3@user.com',
-  password: '123456'
-  )
+  password: '123456',
+  location: 'Astor Bar'
+)
 emma = User.create!(
   name: 'Emma',
   photo: 'https://i.imgur.com/YmMzn2A.jpg',
@@ -43,7 +47,8 @@ emma = User.create!(
   gender:'female',
   sexual_orientation:'bisexual',
   email: 'user4@user.com',
-  password: '123456'
+  password: '123456',
+  location: 'Amarelin'
   )
 james = User.create!(
   name: 'James',
@@ -53,7 +58,8 @@ james = User.create!(
   gender: 'male',
   sexual_orientation: 'homo',
   email: 'user5@user.com',
-  password: '123456'
+  password: '123456',
+  location: 'Pergula'
   )
 river = User.create!(
   name: 'River',
@@ -63,7 +69,8 @@ river = User.create!(
   gender:'male',
   sexual_orientation:'bisexual',
   email: 'user6@user.com',
-  password: '123456'
+  password: '123456',
+  location: 'Gurume'
   )
 ariel = User.create!(
   name: 'Ariel',
@@ -73,7 +80,8 @@ ariel = User.create!(
   gender: 'male',
   sexual_orientation: 'homo',
   email: 'user7@user.com',
-  password: '123456'
+  password: '123456',
+  location: 'Farfarello'
 )
 remi = User.create!(
   name: 'Remi',
@@ -83,7 +91,8 @@ remi = User.create!(
   gender: 'male',
   sexual_orientation: 'hetero',
   email: 'user8@user.com',
-  password: '123456'
+  password: '123456',
+  location: 'Gero'
   )
 quinn = User.create!(
   name: 'Quinn',
@@ -93,7 +102,8 @@ quinn = User.create!(
   gender: 'female',
   sexual_orientation: 'hetero',
   email: 'user9@user.com',
-  password: '123456'
+  password: '123456',
+  location: 'Nema'
   )
 marley = User.create!(
   name: 'Marley',
@@ -103,7 +113,8 @@ marley = User.create!(
   gender: 'male',
   sexual_orientation: 'homo',
   email: 'user10@user.com',
-  password: '123456'
+  password: '123456',
+  location: 'Manekineko'
   )
 london = User.create!(
   name: 'London',
@@ -113,7 +124,8 @@ london = User.create!(
   gender:'male',
   sexual_orientation:'bisexual',
   email: 'user11@user.com',
-  password: '123456'
+  password: '123456',
+  location: 'Picci'
   )
 drew = User.create!(
   name: 'Drew',
@@ -123,7 +135,8 @@ drew = User.create!(
   gender:'female',
   sexual_orientation:'hetero',
   email: 'user12@user.com',
-  password: '123456'
+  password: '123456',
+  location: 'Al Mare'
   )
 blair = User.create!(
     name: 'Blair',
@@ -133,7 +146,8 @@ blair = User.create!(
   gender:'female',
   sexual_orientation:'bisexual',
   email: 'user13@user.com',
-  password: '123456'
+  password: '123456',
+  location: 'Le Vin Bistro'
   )
 olivia = User.create!(
   name: 'Olivia',
@@ -143,7 +157,8 @@ olivia = User.create!(
   gender: 'female',
   sexual_orientation: 'hetero',
   email: 'user14@user.com',
-  password: '123456'
+  password: '123456',
+  location: 'Venga'
   )
 
 puts "Creating frienships..."

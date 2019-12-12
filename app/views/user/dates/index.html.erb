@@ -3,10 +3,12 @@
   <li>
   <% if current_user.id == date.friend.id %>
     <p> <%= date.matchee.name %> </p>
-    <p> <%= date.match_date.start_at %> </p>
+    <p> <%= date.match_date.start_at.strftime('%A %H:%M%p') %> </p>
+    <p> <%= date.friend.location %> </p>
   <% else%>
     <p> <%= date.friend.name %> </p>
-    <p> <%= date.match_date.start_at %> </p>
+    <p> <%= date.match_date.start_at.strftime('%A %H:%M%p') %> </p>
+    <p> <%= date.friend.location %> </p>
   <% end %>
   </li>
 <% end %>

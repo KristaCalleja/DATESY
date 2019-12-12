@@ -3,6 +3,10 @@ class User::DatesController < ApplicationController
     @dates = current_user.official_dates
   end
 
+  def show
+    @date = Match.find(params[:match_id]).match_date.id
+  end
+
   def new
     @match = Match.find(params[:match_id])
     @date = MatchDate.new
@@ -13,9 +17,8 @@ class User::DatesController < ApplicationController
     @date = MatchDate.new(date_params)
 
     if @date.save
-
       Match.find(params[:match_id]).update(match_date_id: @date.id)
-      redirect_to root_path
+      redirect_to user_date_path
     else
       render :new
     end
