@@ -1,0 +1,26 @@
+.slick {
+}
+
+.friend-card {
+  padding: 0.5rem;
+  height: calc(60vh - 72px - 30px);
+
+  .friend-card-content {
+    padding: 2rem;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100%;
+    position: relative;
+    border-radius: 8px;
+  }
+
+  .friend-card-match-button {
+    $card-padding: 1rem;
+
+    bottom: $card-padding;
+    left: $card-padding;
+    right: $card-padding;
+    position: absolute;
+  }
+}

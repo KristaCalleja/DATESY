@@ -6,3 +6,25 @@ import { initMatchForms } from "../components/match_form";
 
 initMatchForms();
 // initWaves();
+
+
+
+import '../../../node_modules/slick-carousel/slick/slick.css'
+import '../../../node_modules/slick-carousel/slick/slick-theme.css'
+import 'slick-carousel'
+
+document.addEventListener('DOMContentLoaded', () => {
+  $('.slick').slick({
+    // initialSlide: 1,
+    // slidesToShow: 1,
+    // slidesToScroll: 1,
+    // centerMode: true,
+    // centerPadding: '16px',
+
+    centerMode: true,
+    centerPadding: '24px',
+    slidesToShow: 1,
+  });
+
+});
+
