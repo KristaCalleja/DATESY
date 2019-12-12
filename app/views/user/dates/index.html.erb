@@ -1,18 +1,20 @@
 <h1> Dates </h1>
-<% @dates.each do |date| %>
-  <li>
-  <% if current_user.id == date.friend.id %>
-    <p> <%= date.matchee.name %> </p>
-    <% if !date.match_date.nil? %>
-      <p> <%= date.match_date.start_at.strftime('%A %H:%M%p') %> </p>
+<div class="cards">
+  <% @dates.each do |date| %>
+    <% if current_user.id == date.friend.id %>
+      <div class="card" data-id=<%= date.id %>>
+        <%= image_tag date.matchee.photo, class: 'img-fluid' %>
+        <div class="card-body">
+          <%= render "shared/date_card_friend", date: date, display_button: false %>
+        </div>
+      </div>
+    <% else%>
+      <div class="card" data-id=<%= date.id %>>
+        <%= image_tag date.friend.photo, class: 'img-fluid' %>
+        <div class="card-body">
+          <%= render "shared/date_card_matchee", date: date, display_button: false %>
+        </div>
+      </div>
     <% end %>
-    <p> <%= date.friend.location %> </p>
-  <% else%>
-    <p> <%= date.friend.name %> </p>
-    <% if !date.match_date.nil? %>
-      <p> <%= date.match_date.start_at.strftime('%A %H:%M%p') %> </p>
-    <% end %>
-    <p> <%= date.friend.location %> </p>
   <% end %>
-  </li>
-<% end %>
+</div>

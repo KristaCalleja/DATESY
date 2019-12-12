@@ -1,0 +1,5 @@
+<p class="card-name"><strong><%= date.friend.name %></strong></p>
+<% if !date.match_date.nil? %>
+  <p class="card-text"> <%= date.match_date.start_at.strftime('%A %H:%M%p') %></p>
+<% end %>
+<p class="card-age"><%= date.friend.location %> </p>

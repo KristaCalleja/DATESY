@@ -4,9 +4,6 @@
       <%= image_tag matchee.photo, class: 'img-fluid' %>
       <div class="card-body">
         <%= render "shared/matchmaker_card", matchee: matchee, display_button: false %>
-        <!-- Behavior of reject! -->
-        <!-- Remove element from the list -->
-
         <div class="d-flex justify-content-between">
           <%= simple_form_for [@friend, @match], url: user_friend_matches_path, html: { class: 'match-reject-form' }, remote: true do |f| %>
             <%= f.input :matchee_id, as: :hidden, input_html: { value: matchee.id } %>
@@ -14,11 +11,7 @@
             <%= f.button :button, class: "btn btn-primary" do %>
               <i class="fas fa-times fa-2x"></i>
             <% end %>
-
           <% end %>
-          <!-- Behavior of accept! -->
-          <!-- Trigger the modal form -->
-          <!-- Fill the matchee_id in the form, with the selected matchee id -->
           <%= render "shared/match_button_with_modal", match: @match, friend: @friend, matchee: matchee %>
         </div>
       </div>
