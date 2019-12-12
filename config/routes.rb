@@ -22,7 +22,7 @@ Rails.application.routes.draw do
     resources :dates, only: [:index]
 
     resources :matches, only: [:index] do
-      resources :dates, only: [:new, :create]
+      resources :dates, only: [:new, :create, :show]
       post :status_change
     end
 
