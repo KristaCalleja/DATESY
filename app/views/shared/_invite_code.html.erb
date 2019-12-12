@@ -1,34 +1,12 @@
-<div class="boxed">
-    <div class="row justify-content-center">
-      <h2>Invite to Datesy</h2>
-        <div class="row justify-content-center">
-          <div class="boxed">
-          <input id="invite-friend" class="form-control" type="text" value="<%= new_user_registration_url(friend_id: current_user.id) %>">
-            <div>
-              <br>
-              <div class="row justify-content-center">
-                <button class="large_button" onclick="copyToClipboard()">Copy invite!</button>
-              </div>
-            </div>
-      </div>
+<h2>Invite a Matchmaker</h2>
+<div class="row justify-content-center">
+  <div class="boxed-bar">
+    <div class="d-inline-flex p-2">
+    <input id="invite-friend" class="form-control" type="text" value="<%= new_user_registration_url(friend_id: current_user.id) %>">    <button data-target="#invite-friend" class="large_button copy-button"><i class="far fa-copy 2x"></button></i>
+    </div>
   </div>
-</div>
 </div>
 <% content_for :after_js do %>
   <script>
-    function copyToClipboard() {
-      /* Get the text field */
-      var copyText = document.getElementById("invite-friend");
-
-      /* Select the text field */
-      copyText.select();
-      copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-
-      /* Copy the text inside the text field */
-      document.execCommand("copy");
-
-      /* Alert the copied text */
-      alert("Link copied! Invite your matchmaker ;)");
-    }
   </script>
 <% end %>
