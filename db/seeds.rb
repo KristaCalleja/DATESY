@@ -298,6 +298,6 @@ fourthmatch = Match.create!(
   matchee: marley,
   friend: jordan,
   matchmaker: milene,
-  status: 'matchee_accepted'
+  status: 'friend_accepted'
 )
 
