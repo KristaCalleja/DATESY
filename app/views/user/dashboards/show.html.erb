@@ -14,16 +14,10 @@
     </div>
   </div>
   <br>
-  <%= link_to 'Review My Matches', user_matches_path, class: "large_button" %>
-  <br>
-  <br>
-  <%= link_to 'My Dates', user_dates_path, class: "large_button" %>
-  <br>
-  <br>
   <%= link_to "Update My Availability", new_user_availability_pick_path, class: "large_button" %>
   <br>
   <br>
-  <%= link_to "# Manage My Matchmakers", user_matches_path, class: "large_button" %>
+  <%= link_to 'My Dates', user_dates_path, class: "large_button" %>
   <br>
   <br>
   <%= link_to('Sign Out', destroy_user_session_path, method: :delete, class: "large_button") %>
