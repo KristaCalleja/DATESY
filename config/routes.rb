@@ -19,7 +19,7 @@ Rails.application.routes.draw do
       resources :matches, only: [:new, :create]
     end
 
-    resources :dates, only: [:index]
+    resources :dates, only: [:index, :show]
 
     resources :matches, only: [:index] do
       resources :dates, only: [:new, :create]
