@@ -30,22 +30,23 @@
   }
 }
 
+// Switch off background color
 .layer {
   width: 100%;
-  background-color: #fcf0f8;
+  background-color: #f2f2f2;
   transition: 0.3s ease all;
   z-index: 1;
 }
 
-  /* Button 13 */
 #button-13 .knobs:before, #button-13 .knobs:after, #button-13 .knobs span {
   position: absolute;
   border-radius: 10px;
   transition: 0.3s ease all;
 }
 
+// Switch on knob color
 #button-13 .knobs:before, #button-13 .knobs:after {
-  color: #4e4e4e;
+  color: #FCBDE5;
   z-index: 1;
 }
 
@@ -57,18 +58,22 @@
   right: 4px;
 }
 
+// Switch off knob color
 #button-13 .knobs span {
   width: 25px;
   left: 37px;
-  background-color: #FCBDE5;
+  background-color: #4e4e4e;
   z-index: 2;
 }
 
+// ???
 #button-13 .checkbox:checked + .knobs span {
   left: 4px;
-  background-color: #4e4e4e;
+  background-color: #fcbde5;
 }
 
+// Switch on background color
 #button-13 .checkbox:checked ~ .layer {
-  background-color: #f2f2f2;
+  background-color: #fcf0f8;
 }
+
