@@ -1,28 +1,34 @@
 <div class="availability">
-<h1>My Date Availability</h1>
-<%= simple_form_for :availability_picks, url: user_availability_picks_path do |f| %>
-<div class="availability-options">
-  <div class="availability-thursday">
-  <%= simple_fields_for :availability_thursday do |thursday| %>
-    <h2>Thursday</h2>
-    <%= thursday.input :times, collection: [["12:00pm", 12], ["8:00pm", 20]], as: :check_boxes %>
-  <% end %>
-  </div>
+  <h1>My Date Availability</h1>
+  <%= simple_form_for :availability_picks, url: user_availability_picks_path do |f| %>
+    <div class="availability-options">
+      <div class="availability-thursday">
+        <fieldset class="form-group availability_thursday_times">
+          <legend class="col-form-label pt-0">Thursday</legend>
+          <%= render "forms/checkbox_switch", weekday: "thursday", value: "12", label: "12:00pm" %>
+          <%= render "forms/checkbox_switch", weekday: "thursday", value: "20", label: "8:00pm"  %>
+        </fieldset>
+      </div>
 
-  <div class="availability-friday">
-  <%= simple_fields_for :availability_friday do |friday| %>
-    <h2>Friday</h2>
-    <%= friday.input :times, collection: [["12:00pm", 12], ["8:00pm", 20]], as: :check_boxes %>
-  <% end %>
-  </div>
+      <div class="availability-friday">
+        <fieldset class="form-group availability_friday_times">
+          <legend class="col-form-label pt-0">friday</legend>
+          <%= render "forms/checkbox_switch", weekday: "friday", value: "12", label: "12:00pm" %>
+          <%= render "forms/checkbox_switch", weekday: "friday", value: "20", label: "8:00pm"  %>
+        </fieldset>
+      </div>
 
-  <div class="availability-saturday">
-  <%= simple_fields_for :availability_saturday do |saturday| %>
-    <h2>Saturday</h2>
-    <%= saturday.input :times, collection: [["12:00pm", 12], ["8:00pm", 20]], as: :check_boxes %>
+      <div class="availability-saturday">
+        <fieldset class="form-group availability_saturday_times">
+          <legend class="col-form-label pt-0">saturday</legend>
+          <%= render "forms/checkbox_switch", weekday: "saturday", value: "12", label: "12:00pm" %>
+          <%= render "forms/checkbox_switch", weekday: "saturday", value: "20", label: "8:00pm"  %>
+        </fieldset>
+      </div>
+    </div>
+    <%= f.button :submit, 'Update', class: "large_button" %>
   <% end %>
-  </div>
 </div>
-  <%= f.button :submit, 'Update', class: "large_button" %>
-<% end %>
-</div>
+
+
+
