@@ -1,6 +1,6 @@
 <div class="friend-card">
   <div class="friend-card-content" style="background-image: url(<%= friend.photo %>);">
     <!-- <h3><%= friend.name %></h3> -->
-    <%= link_to "<i class='fas fa-heart fa-1x'></i> Match for #{friend.name}".html_safe, new_user_friend_match_path(friend), class: "btn btn-danger friend-card-match-button" %>
+    <%= link_to "<i class='fas fa-heart fa-1x'></i> Match for #{friend.name}".html_safe, new_user_friend_match_path(friend), class: "btn btn-success friend-card-match-button" %>
   </div>
 </div>
