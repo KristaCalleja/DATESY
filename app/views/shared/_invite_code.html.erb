@@ -1,15 +1,10 @@
-<div class="boxed">
-    <div class="row justify-content-center">
-      <h2>Invite to Datesy</h2>
-        <div class="row justify-content-center">
-          <div class="boxed">
-          <input id="invite-friend" class="form-control" type="text" value="<%= new_user_registration_url(friend_id: current_user.id) %>">
-          <div>
-            <button data-target="#invite-friend" class="large_button copy-button"><i class="far fa-copy"></button></i>
-          </div>
-      </div>
+<h2>Invite to Datesy</h2>
+<div class="row justify-content-center">
+  <div class="boxed-bar">
+    <div class="d-inline-flex p-2">
+    <input id="invite-friend" class="form-control" type="text" value="<%= new_user_registration_url(friend_id: current_user.id) %>">    <button data-target="#invite-friend" class="large_button copy-button"><i class="far fa-copy 2x"></button></i>
+    </div>
   </div>
-</div>
 </div>
 <% content_for :after_js do %>
   <script>
