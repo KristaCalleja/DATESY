@@ -3,6 +3,11 @@ class User::DatesController < ApplicationController
     @dates = current_user.official_dates
   end
 
+  def show
+    @date = MatchDate.find(params[:date_id])
+    @match = Match.find(params[:match_id])
+  end
+
   def new
     @match = Match.find(params[:match_id])
     @date = MatchDate.new
