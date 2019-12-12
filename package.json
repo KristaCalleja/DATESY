@@ -7,8 +7,8 @@
     "jquery": "^3.4.1",
     "node-waves": "^0.7.6",
     "popper.js": "^1.16.0",
-    "slick-carousel": "^1.8.1",
-    "sweetalert2": "^9.5.3"
+    "sweetalert2": "^9.5.3",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "ngrok": "^3.2.5",
