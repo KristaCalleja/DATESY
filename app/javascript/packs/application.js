@@ -9,6 +9,6 @@ import { initWaves } from "../components/waves";
 initMatchForms();
 initFriendsCarousel();
 initCopyButton();
-initWaves();
+// initWaves();
 
 
