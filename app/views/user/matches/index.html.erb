@@ -4,7 +4,10 @@
       <div class="card" data-id=<%= match.id %>>
         <%= image_tag match.matchee.photo, class: 'img-fluid' %>
         <div class="card-body">
-          <%= render "shared/matchmaker_card", matchee: match.matchee, text: "My Matchmaker", color: "#FCBDE5", display_button: true %>
+          <div class="matchmaker-avatar">
+            <%= render "shared/small_avatar", photo: match.matchmaker.photo %>
+          </div>
+          <%= render "shared/matchmaker_card", matchee: match.matchee, text: "Sent by My Matchmaker", color: "#FCBDE5", display_button: true %>
           <div class="d-flex justify-content-between">
             <%= link_to user_match_status_change_path(match, status: 'friend_rejected'), class: "large_button", method: :post do %>
             <i class='fas fa-times fa-2x'></i>
@@ -19,7 +22,7 @@
       <div class="card" data-id=<%= match.id %>>
         <%= image_tag match.friend.photo, class: 'img-fluid' %>
         <div class="card-body">
-          <%= render "shared/matchmaker_card", matchee: match.friend, text: "Their Matchmaker", color: "#E9F6BF", display_button: true %>
+          <%= render "shared/matchmaker_card", matchee: match.friend, text: "Sent by Their Matchmaker", color: "#E9F6BF", display_button: true %>
           <div class="d-flex justify-content-between">
             <%= link_to user_match_status_change_path(match, status: 'matchee_rejected'), class: "large_button", method: :post do %>
             <i class='fas fa-times fa-2x'></i>

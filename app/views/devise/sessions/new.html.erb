@@ -1,5 +1,6 @@
 <br>
 <br>
+<div class="container">
 <h2 class="login">Log In</h2>
 <div class="login-form">
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -20,4 +21,5 @@
 <% end %>
 
 <%= render "devise/shared/links", class: "large_button" %>
+</div>
 </div>
