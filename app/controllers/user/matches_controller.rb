@@ -3,6 +3,10 @@ class User::MatchesController < ApplicationController
     @matches = current_user.potential_matches
   end
 
+  def show
+    @match = Match.find(params[:id])
+  end
+
   def new
     @friend = User.find(params[:friend_id])
     @match = Match.new
