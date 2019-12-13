@@ -1,7 +1,12 @@
 <div class="cards">
   <% @available_matchees.each do |matchee| %>
     <div class="card" data-id=<%= matchee.id %>>
-      <%= image_tag matchee.photo, class: 'img-fluid' %>
+      <div class="position-relative">
+        <%= image_tag matchee.photo, class: 'img-fluid' %>
+        <div class="matchmaker-avatar bottom-avatar">
+          <%= render "shared/small_avatar", photo: @friend.photo %>
+        </div>
+      </div>
       <div class="card-body">
         <%= render "shared/matchmaker_card", matchee: matchee, display_button: false %>
         <!-- Behavior of reject! -->
