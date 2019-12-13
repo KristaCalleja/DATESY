@@ -25,7 +25,10 @@
   <%= link_to 'My Dates', user_dates_path, class: "large_button" %>
   <br>
   <br>
-  <%= link_to('Sign Out', destroy_user_session_path, method: :delete, class: "large_button") %>
+  <%= link_to destroy_user_session_path, method: :delete, class: "large_button" do %>
+    <i class="fas fa-sign-out-alt"></i>
+    Sign Out
+  <% end %>
   <br>
   <br>
   <div class="boxed">
