@@ -5,6 +5,8 @@ class User::MatchesController < ApplicationController
 
   def show
     @match = Match.find(params[:id])
+    @time = @match.match_date.start_at
+    @time  = (@time.to_time - 3.hours).to_datetime
   end
 
   def new
