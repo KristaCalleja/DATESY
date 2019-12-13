@@ -15,3 +15,21 @@
   opacity: 1;
   text-decoration: none;
 }
+
+.day-button {
+  background-color: #1B5357;
+  color: #FFFFF4;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: $header-font;
+  font-size: 16px;
+}
+
+.day-button:active {
+  color: #FFFFF4;
+  opacity: 1;
+  text-decoration: none;
+}
