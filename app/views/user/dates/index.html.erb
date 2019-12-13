@@ -1,18 +1,21 @@
-<h1> Dates </h1>
+<div class="dates-container">
+<h1> My Dates </h1>
 <% @dates.each do |date| %>
-  <li>
   <% if current_user.id == date.friend.id %>
+    <p> <%= render "shared/medium_avatar", user: date.matchee %> </p>
     <p> <%= date.matchee.name %> </p>
     <% if !date.match_date.nil? %>
       <p> <%= date.match_date.start_at.strftime('%A %H:%M%p') %> </p>
     <% end %>
     <p> <%= date.friend.location %> </p>
   <% else%>
+    <p> <%= render "shared/medium_avatar", user: date.friend %> </p>
     <p> <%= date.friend.name %> </p>
     <% if !date.match_date.nil? %>
       <p> <%= date.match_date.start_at.strftime('%A %H:%M%p') %> </p>
     <% end %>
     <p> <%= date.friend.location %> </p>
   <% end %>
-  </li>
 <% end %>
+<%= link_to "Back", root_path, class: "large_button" %>
+</div>
