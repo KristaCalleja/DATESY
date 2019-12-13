@@ -14,16 +14,11 @@
   <p> <%= render "shared/single_button" %><%= render "shared/matchmaker_button" %></p>
   <h3> Joined December 2019 </h3>
   <br>
-  <div class="buttons mx-5">
-    <%= link_to 'Review My Matches', user_matches_path, class: "large_button btn-block" %>
-    <br>
-    <br>
-    <%= link_to "Update My Availability", new_user_availability_pick_path, class: "large_button btn-block" %>
-    <br>
-    <br>
-    <%= link_to 'My Dates', user_dates_path, class: "large_button btn-block" %>
-  </div>
+  <%= link_to 'Review My Matches', user_matches_path, class: "large_button" %>
   <br>
+  <%= link_to "Update My Availability", new_user_availability_pick_path, class: "large_button" %>
+  <br>
+  <%= link_to 'My Dates', user_dates_path, class: "large_button" %>
   <br>
   <%= link_to destroy_user_session_path, method: :delete, class: "large_button" do %>
     <i class="fas fa-sign-out-alt"></i>

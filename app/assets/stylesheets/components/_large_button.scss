@@ -1,6 +1,6 @@
 .large_button {
-  background-color: #1B5357;
-  color: #FFFFF4;
+  background-color: #primary;
+  color: $off-white;
   padding: 5px 10px;
   border-radius: 5px;
   transition: background 0.3s ease;
@@ -12,14 +12,14 @@
 }
 
 .large_button:active {
-  color: #FFFFF4;
+  color: $off-white;
   opacity: 1;
   text-decoration: none;
 }
 
 .day-button {
-  background-color: #1B5357;
-  color: #FFFFF4;
+  background-color: $primary;
+  color: $off-white;
   padding: 5px 10px;
   border-radius: 5px;
   transition: background 0.3s ease;
@@ -30,7 +30,7 @@
 }
 
 .day-button:active {
-  color: #FFFFF4;
+  color: $off-white;
   opacity: 1;
   text-decoration: none;
 }

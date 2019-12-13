@@ -1,11 +1,31 @@
-<div class="container">
-  <h2>Select a day from the below</h1>
-
+<div class="scheduler-container container">
+  <br>
+  <h2>Select Your Date</h1>
   <h3> Location: <%= @match.friend.location %> </h2>
   <%= simple_form_for [@match, @date], url: user_match_dates_path(@match) do |f| %>
     <%= f.input :start_at,
+                label: "",
                 as: :radio_buttons,
-                collection: humanize_date_collection(@match.friend.available_times_this_week) %>
-    <%= f.submit 'Schedule this date now', class: "day-button" %>
+                collection: humanize_date_collection(@match.friend.available_times_this_week),
+                required: false %>
+
+<!--     <div class="form-check">
+      <input class="form-check-input radio_buttons optional" type="radio" value="2019-12-20T12:00:00-03:00" name="match_date[start_at]" id="match_date_start_at_2019-12-20t120000-0300">
+      <label class="form-check-label collection_radio_buttons" for="match_date_start_at_2019-12-20t120000-0300">
+        Friday 12:00PM
+      </label>
+    </div>
+
+    <div class="availability-options">
+      <div class="availability-thursday">
+        <fieldset class="form-group availability_thursday_times">
+          <legend class="col-form-label pt-0">Thursday</legend>
+          <%= render "forms/checkbox_switch", weekday: "thursday", value: "12", label: "12:00pm" %>
+          <%= render "forms/checkbox_switch", weekday: "thursday", value: "20", label: "8:00pm"  %>
+        </fieldset>
+      </div>
+    </div> -->
+
+    <%= f.submit 'Book Date', class: "large-button" %>
   <% end %>
 </div>

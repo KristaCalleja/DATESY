@@ -1,6 +1,8 @@
-<h1> Save the date!!!</h1>
-<p> <%= render "shared/medium_avatar", user: @match.friend %> -- S2 -- <%= render "shared/medium_avatar", user: @match.matchee %></p>
+<div class="date-booked">
+<h1> Your Date is Booked! <i class="fas fa-glass-cheers"></i></h1>
+<p> <%= render "shared/medium_avatar", user: @match.friend %> <i class="fas fa-heart fa-2x"></i> <%= render "shared/medium_avatar", user: @match.matchee %></p>
+<p> Date with <%= @match.friend.name %> </p>
 <p> <%= @match.friend.location %> </p>
 <p> <%= @time.strftime('%A %H:%M%p') %> </p>
-
-<%= link_to "back", user_dates_path, class: "large_button" %>
+<%= link_to "Back", root_path, class: "large_button" %>
+</div>

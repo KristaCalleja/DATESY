@@ -1,3 +1,26 @@
+.dates-container {
+  background-color: $teal;
+  color: $primary;
+  text-align: center;
+}
+
+.date-booked {
+  float: center;
+  text-align: center;
+  background-color: $teal;
+  color: $primary;
+}
+
+.scheduler-container {
+  background-color: $teal;
+  h2 {
+    color: $primary;
+  }
+  h3 {
+    color: $primary;
+  }
+}
+
 .form-inputs {
   background-color: $off-white;
 }
