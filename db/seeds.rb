@@ -173,7 +173,7 @@ olivia = User.create!(
   )
 
 kamrin = User.create!(
-  name: 'Kamrin Klauschie',
+  name: 'Kam Klauschie',
   photo: 'https://i.imgur.com/XZQLbYh.jpg',
   age: 29,
   description: 'I\'m a California girl visiting Rio to study programming. I can drive busses and motorcycles, so you better be ready for some adventures. I love reading, traveling, and a good game of soccer.'  ,
@@ -221,7 +221,7 @@ marcos = User.create!(
   )
 
 cami = User.create!(
-  name: 'Camille de Bernis',
+  name: 'Cami de Bernis',
   photo: 'https://i.imgur.com/wtnUBaq.jpg',
   age: 27,
   description: 'I\'m French and very romantic. My best joke is plus three, but not for threesomes. I hope my girlfriend is not in the audience at Demo Day and she doesn’t see my profile on Datesy because I will get in trouble again.'  ,
@@ -273,7 +273,8 @@ puts "Creating friendships..."
 jordan.friends << [milene, ariel, blair, emma, james]
 harley.friends << ariel
 marley.friends << james
-kamrin.friends << [isa, cami]
+kamrin.friends << [isa, luis]
+luis.friends << [cami]
 
 puts "Creating matches..."
 firstmatch = Match.create!(
@@ -300,4 +301,39 @@ fourthmatch = Match.create!(
   matchmaker: milene,
   status: 'friend_accepted'
 )
-
+fifthmatch = Match.create!(
+  matchee: luis,
+  friend: milene,
+  matchmaker: cami,
+  status: 'friend_accepted'
+)
+sixthmatch = Match.create!(
+  matchee: luis,
+  friend: emma,
+  matchmaker: cami,
+  status: 'friend_accepted'
+)
+seventhmatch = Match.create!(
+  matchee: kamrin,
+  friend: marcos,
+  matchmaker: isa,
+  status: 'friend_accepted'
+)
+eighthmatch = Match.create!(
+  matchee: kamrin,
+  friend: caio,
+  matchmaker: isa,
+  status: 'friend_accepted'
+)
+ninthmatch = Match.create!(
+  matchee: kamrin,
+  friend: milene,
+  matchmaker: luis,
+  status: 'friend_accepted'
+)
+tenthmatch = Match.create!(
+  matchee: luis,
+  friend: isa,
+  matchmaker: kamrin,
+  status: 'friend_accepted'
+)
