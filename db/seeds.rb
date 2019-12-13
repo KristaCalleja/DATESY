@@ -2,6 +2,7 @@ puts "Clearing DB..."
 Friendship.destroy_all
 Match.destroy_all
 User.destroy_all
+Availability.destroy_all
 
 puts "Creating users..."
 
@@ -337,3 +338,35 @@ tenthmatch = Match.create!(
   matchmaker: kamrin,
   status: 'friend_accepted'
 )
+
+puts "Creating Availability..."
+
+#milene
+
+firstavailabilitythursday = milene.availabilities.thursday.update(times: [12])
+firstavailabilityfriday = milene.availabilities.friday.update(times: [20])
+firstavailabilitysaturday = milene.availabilities.saturday.update(times: [12, 20])
+
+#emma
+
+secondavailabilitythursday = emma.availabilities.thursday.update(times: [12])
+secondavailabilityfriday = emma.availabilities.friday.update(times: [20])
+secondavailabilitysaturday = emma.availabilities.saturday.update(times: [12, 20])
+
+#marcos
+
+thirdavailabilitythursday = marcos.availabilities.thursday.update(times: [12])
+thirdavailabilityfriday = marcos.availabilities.friday.update(times: [20])
+thirdavailabilitysaturday = marcos.availabilities.saturday.update(times: [12, 20])
+
+#caio
+
+fourthavailabilitythursday = caio.availabilities.thursday.update(times: [12])
+fourthavailabilityfriday = caio.availabilities.friday.update(times: [20])
+fourthavailabilitysaturday = caio.availabilities.saturday.update(times: [12, 20])
+
+#isa
+
+fifthavailabilitythursday = isa.availabilities.thursday.update(times: [12])
+fifthavailabilityfriday = isa.availabilities.friday.update(times: [20])
+fifthavailabilitysaturday = isa.availabilities.saturday.update(times: [12, 20])
