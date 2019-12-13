@@ -10,9 +10,8 @@
   font-size: 16px;
 }
 
-// .large_button:hover {
-//   background: #C8D9DA;
-//   color: #FFFFF4;
-//   opacity: 1;
-//   text-decoration: none;
-// }
+.large_button:active {
+  color: #FFFFF4;
+  opacity: 1;
+  text-decoration: none;
+}
